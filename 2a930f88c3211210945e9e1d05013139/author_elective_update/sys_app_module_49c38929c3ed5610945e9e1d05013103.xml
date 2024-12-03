@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="eSO">7b40324dc3add210945e9e1d05013134</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>eSO Approval</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1040502_eso_mo_0_eso_approval1</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 11:00:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>49c38929c3ed5610945e9e1d05013103</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>eSO Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_app_module_49c38929c3ed5610945e9e1d05013103</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 11:00:15</sys_updated_on>
+        <timeline_page/>
+        <title>eSO Approval</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>sys_app_module_49c38929c3ed5610945e9e1d05013103</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="eSO">7b40324dc3add210945e9e1d05013134</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>eSO Approval</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1040502_eso_mo_0_eso_approval1</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-29 11:00:15</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>49c38929c3ed5610945e9e1d05013103</sys_id><sys_mod_count>0</sys_mod_count><sys_name>eSO Approval</sys_name><sys_overrides/><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>sys_app_module_49c38929c3ed5610945e9e1d05013103</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-29 11:00:15</sys_updated_on><timeline_page/><title>eSO Approval</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-195951756</payload_hash>
+        <record_name>eSO Approval</record_name>
+        <reverted_from/>
+        <source>2e930f88c3211210945e9e1d05013188</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 11:00:15</sys_created_on>
+        <sys_id>09d34929c3ed5610945e9e1d050131d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192d7eef7ec0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 11:00:15</sys_updated_on>
+        <type>Module</type>
+        <update_guid>0dd3492991ed5610cee79df39c3d74d8</update_guid>
+        <update_guid_history>0dd3492991ed5610cee79df39c3d74d8:-195951756</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="eSO Approval">e7024b5bc3e11210945e9e1d0501315c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-04 06:41:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>01053f7603a147f48001d121d8d65fc1</sys_id>
+        <sys_metadata>49c38929c3ed5610945e9e1d05013103</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>eSO Approval</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>sys_app_module_49c38929c3ed5610945e9e1d05013103</sys_update_name>
+        <sys_update_version display_value="sys_app_module_49c38929c3ed5610945e9e1d05013103">09d34929c3ed5610945e9e1d050131d9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-04 06:41:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

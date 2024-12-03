@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list">
+    <sys_ux_applicability_m2m_list action="DELETE">
+        <active>true</active>
+        <applicability display_value="Audience for app eso-mockup">a76966c1c3add210945e9e1d05013102</applicability>
+        <list/>
+        <order>100</order>
+        <sys_class_name>sys_ux_applicability_m2m_list</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-28 05:07:12</sys_created_on>
+        <sys_id>bf6966c1c3add210945e9e1d0501318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_list_bf6966c1c3add210945e9e1d0501318b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-28 05:07:12</sys_updated_on>
+    </sys_ux_applicability_m2m_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>sys_ux_applicability_m2m_list_bf6966c1c3add210945e9e1d0501318b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list"><sys_ux_applicability_m2m_list action="INSERT_OR_UPDATE"><active>true</active><applicability display_value="Audience for app eso-mockup">a76966c1c3add210945e9e1d05013102</applicability><list/><order>100</order><sys_class_name>sys_ux_applicability_m2m_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-28 05:07:12</sys_created_on><sys_id>bf6966c1c3add210945e9e1d0501318b</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>sys_ux_applicability_m2m_list_bf6966c1c3add210945e9e1d0501318b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-28 05:07:12</sys_updated_on></sys_ux_applicability_m2m_list></record_update>]]></payload>
+        <payload_hash>-1032331864</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>2e930f88c3211210945e9e1d05013188</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 07:56:30</sys_created_on>
+        <sys_id>adc954edc3e95610945e9e1d05013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192d746be130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 07:56:30</sys_updated_on>
+        <type>List Applicability</type>
+        <update_guid>bf6966c11eadd21022920117fea44f8c</update_guid>
+        <update_guid_history>bf6966c11eadd21022920117fea44f8c:982572254,bf6966c11eadd21022920117fea44f8c:982572254</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 07:56:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_applicability_m2m_list">sys_ux_applicability_m2m_list</sys_db_object>
+        <sys_id>608ddff032e9498aa481c7dd6e5344c1</sys_id>
+        <sys_metadata>bf6966c1c3add210945e9e1d0501318b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>sys_ux_applicability_m2m_list_bf6966c1c3add210945e9e1d0501318b</sys_update_name>
+        <sys_update_version display_value="sys_ux_applicability_m2m_list_bf6966c1c3add210945e9e1d0501318b">adc954edc3e95610945e9e1d05013120</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 07:56:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

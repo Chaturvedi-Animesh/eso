@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description>Ribbon Config ID</description>
+        <name>ribbonConfigId</name>
+        <page display_value="">e50ad8ed0ce95610369c36b1893f4ef9</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 07:57:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>a10ad8ed25e956109b1705b4120b6de9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ribbonConfigId</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_ux_page_property_a10ad8ed25e956109b1705b4120b6de9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 07:57:38</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1040502_eso_mo_0.e50ad8ed0ce95610369c36b1893f4ef9.root.ribbonConfigId</unique_name>
+        <value>ed0ad8ed9ce9561058ba7e9e726b80e8</value>
+    </sys_ux_page_property>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>sys_ux_page_property_a10ad8ed25e956109b1705b4120b6de9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description>Ribbon Config ID</description><name>ribbonConfigId</name><page display_value="">e50ad8ed0ce95610369c36b1893f4ef9</page><required_translations/><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-29 07:57:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>a10ad8ed25e956109b1705b4120b6de9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ribbonConfigId</sys_name><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>sys_ux_page_property_a10ad8ed25e956109b1705b4120b6de9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-29 07:57:38</sys_updated_on><type>string</type><unique_name>x_1040502_eso_mo_0.e50ad8ed0ce95610369c36b1893f4ef9.root.ribbonConfigId</unique_name><value>ed0ad8ed9ce9561058ba7e9e726b80e8</value></sys_ux_page_property></record_update>]]></payload>
+        <payload_hash>-2097642195</payload_hash>
+        <record_name>ribbonConfigId</record_name>
+        <reverted_from/>
+        <source>a0f37b33c3001210945e9e1d05013182</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-08-23 10:01:52</sys_created_on>
+        <sys_id>f6d087d7c3e11210945e9e1d050131b7</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1917eaf6e800000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Page Property</type>
+        <update_guid>b6d087d781e11210af2402258f7033b7</update_guid>
+        <update_guid_history>b6d087d781e11210af2402258f7033b7:-2097642195</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-04 06:35:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>2a8a517116fc41249b9e382e9b3a4024</sys_id>
+        <sys_metadata>a10ad8ed25e956109b1705b4120b6de9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ribbonConfigId</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_a10ad8ed25e956109b1705b4120b6de9</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_a10ad8ed25e956109b1705b4120b6de9">f6d087d7c3e11210945e9e1d050131b7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-04 06:35:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

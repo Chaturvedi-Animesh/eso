@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">4603c3db1ee112107f68b70f07fe23aa</canvas>
+        <component display_value="List - Simple">2b1c080881e05dc63b917044290b233f</component>
+        <component_props>{"table":"x_1040502_eso_mo_0_eso_approval","fixedQuery":"","listTitle":"Sales Orders","columns":"number,priority,applicant_name,state","query":"active=true","groupByField":"","hideViewAll":false,"hideHighlightedValues":false,"highlightedValueConfigId":"","hideHighlightContent":false,"highlightContent":{"patterns":[],"color":""},"hideLinks":false,"wordWrap":false,"overrideWordWrapUserPref":false,"maxCharLimit":4000,"hideEmptyStateImage":false,"hidePersonalization":true,"hideDotwalk":true,"hideColumnReorder":true,"hideRowSelector":false,"hideColumnGrouping":true,"hideColumnResizing":true,"hideColumnFiltering":true,"hideColumnSorting":false,"hideHeader":false,"hideTitle":false,"hideTitleRowCount":false,"hideLastRefreshedText":false,"hideRefreshButton":false,"hideInlineEditing":true,"noDebounce":true,"id":"wordWrap","value":false,"propLabel":"Enable word wrap"}</component_props>
+        <h>18</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-04 06:45:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4203c3db77e11210d93c9672c3f330ab</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>par_dashboard_widget_4203c3db77e11210d93c9672c3f330ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-11 07:56:42</sys_updated_on>
+        <visualization/>
+        <w>48</w>
+        <widget_props/>
+        <x>0</x>
+        <y>21</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>par_dashboard_widget_4203c3db77e11210d93c9672c3f330ab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">4603c3db1ee112107f68b70f07fe23aa</canvas><component display_value="List - Simple">2b1c080881e05dc63b917044290b233f</component><component_props>{"table":"x_1040502_eso_mo_0_eso_approval","fixedQuery":"","listTitle":"Sales Orders","columns":"number,priority,applicant_name,state","query":"active=true","groupByField":"","hideViewAll":false,"hideHighlightedValues":false,"highlightedValueConfigId":"","hideHighlightContent":false,"highlightContent":{"patterns":[],"color":""},"hideLinks":false,"wordWrap":false,"overrideWordWrapUserPref":false,"maxCharLimit":4000,"hideEmptyStateImage":false,"hidePersonalization":true,"hideDotwalk":true,"hideColumnReorder":true,"hideRowSelector":false,"hideColumnGrouping":true,"hideColumnResizing":true,"hideColumnFiltering":true,"hideColumnSorting":false,"hideHeader":false,"hideTitle":false,"hideTitleRowCount":false,"hideLastRefreshedText":false,"hideRefreshButton":false,"hideInlineEditing":true,"noDebounce":true,"id":"wordWrap","value":false,"propLabel":"Enable word wrap"}</component_props><h>18</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-04 06:45:24</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4203c3db77e11210d93c9672c3f330ab</sys_id><sys_mod_count>8</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>par_dashboard_widget_4203c3db77e11210d93c9672c3f330ab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-11 07:56:42</sys_updated_on><visualization/><w>48</w><widget_props/><x>0</x><y>21</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>1770326761</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>2e930f88c3211210945e9e1d05013188</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-11 07:56:42</sys_created_on>
+        <sys_id>0376936dc3711210945e9e1d05013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1931a39975b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-11 07:56:42</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>c776936d6071121004fb0a317d59fc25</update_guid>
+        <update_guid_history>c776936d6071121004fb0a317d59fc25:1770326761,b476936d2871121034f85a37d60186ea:1966518373,669597e99f711210c447434a95bb6112:-1848593977,986597e9be7112104b05396acfc8415f:1520252036,d1c35369a371121009fd608c36566d8d:-1658117318,ba329fa5ca711210de47b54ce35f1e60:844165375,ecf15f65617112109199f731bb60b335:241324223,f20307db0be11210b93c8dda7e36bba6:862040653,7a0307dbeee1121049b02b83ca5f04a4:340194125</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d5b4bf65c3351210945e9e1d05013150</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-11 10:08:45</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>c75841ba083a40549d3c28967724aa59</sys_id>
+        <sys_metadata>4203c3db77e11210d93c9672c3f330ab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_4203c3db77e11210d93c9672c3f330ab</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_4203c3db77e11210d93c9672c3f330ab">0376936dc3711210945e9e1d05013126</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-11 10:08:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

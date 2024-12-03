@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description>sys_ux_applicability sys_id for Workspace audience</description>
+        <name>wbApplicabilityConfigId</name>
+        <page display_value="eSO Mockup">1a69e2c1acadd21076135e9dc612d3a1</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-28 05:07:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>1e69e2c100add2103775ebd0493bc591</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>wbApplicabilityConfigId</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_ux_page_property_1e69e2c100add2103775ebd0493bc591</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-28 05:07:11</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1040502_eso_mo_0.1a69e2c1acadd21076135e9dc612d3a1.root.global.wbApplicabilityConfigId</unique_name>
+        <value>a76966c1c3add210945e9e1d05013102</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=1e69e2c100add2103775ebd0493bc591"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>sys_ux_page_property_1e69e2c100add2103775ebd0493bc591</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description>sys_ux_applicability sys_id for Workspace audience</description><name>wbApplicabilityConfigId</name><page display_value="eSO Mockup">1a69e2c1acadd21076135e9dc612d3a1</page><required_translations/><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-28 05:07:07</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>1e69e2c100add2103775ebd0493bc591</sys_id><sys_mod_count>1</sys_mod_count><sys_name>wbApplicabilityConfigId</sys_name><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>sys_ux_page_property_1e69e2c100add2103775ebd0493bc591</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-28 05:07:11</sys_updated_on><type>string</type><unique_name>x_1040502_eso_mo_0.1a69e2c1acadd21076135e9dc612d3a1.root.global.wbApplicabilityConfigId</unique_name><value>a76966c1c3add210945e9e1d05013102</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=1e69e2c100add2103775ebd0493bc591"/></record_update>]]></payload>
+        <payload_hash>962610733</payload_hash>
+        <record_name>wbApplicabilityConfigId</record_name>
+        <reverted_from/>
+        <source>2e930f88c3211210945e9e1d05013188</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-28 05:07:11</sys_created_on>
+        <sys_id>6b6966c1c3add210945e9e1d0501310a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192d1855f3f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-28 05:07:11</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>af6966c1b7add210e6ab4cd6ba4c4009</update_guid>
+        <update_guid_history>af6966c1b7add210e6ab4cd6ba4c4009:962610733,276966c1f3add21006d5f3181387da08:-220890059</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 07:56:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>c38fcc64d9c84c22b4d93bfe76500064</sys_id>
+        <sys_metadata>1e69e2c100add2103775ebd0493bc591</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wbApplicabilityConfigId</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_1e69e2c100add2103775ebd0493bc591</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_1e69e2c100add2103775ebd0493bc591">6b6966c1c3add210945e9e1d0501310a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 07:56:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

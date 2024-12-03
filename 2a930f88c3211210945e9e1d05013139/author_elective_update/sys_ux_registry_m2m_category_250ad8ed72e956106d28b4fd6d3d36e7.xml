@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_registry_m2m_category">
+    <sys_ux_registry_m2m_category action="DELETE">
+        <experience_category display_value="Workspace">afb4e3e173322010f0ca1e666bf6a726</experience_category>
+        <order/>
+        <page_registry display_value="">e50ad8ed0ce95610369c36b1893f4ef9</page_registry>
+        <sys_class_name>sys_ux_registry_m2m_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-29 07:57:38</sys_created_on>
+        <sys_id>250ad8ed72e956106d28b4fd6d3d36e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_ux_registry_m2m_category_250ad8ed72e956106d28b4fd6d3d36e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-29 07:57:38</sys_updated_on>
+    </sys_ux_registry_m2m_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</application>
+        <file_path/>
+        <instance_id>cca3323adb1a71542f082a5913961937</instance_id>
+        <instance_name>dev208145</instance_name>
+        <name>sys_ux_registry_m2m_category_250ad8ed72e956106d28b4fd6d3d36e7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_registry_m2m_category"><sys_ux_registry_m2m_category action="INSERT_OR_UPDATE"><experience_category display_value="Workspace">afb4e3e173322010f0ca1e666bf6a726</experience_category><order/><page_registry display_value="">e50ad8ed0ce95610369c36b1893f4ef9</page_registry><sys_class_name>sys_ux_registry_m2m_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-29 07:57:38</sys_created_on><sys_id>250ad8ed72e956106d28b4fd6d3d36e7</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package><sys_policy/><sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope><sys_update_name>sys_ux_registry_m2m_category_250ad8ed72e956106d28b4fd6d3d36e7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-29 07:57:38</sys_updated_on></sys_ux_registry_m2m_category></record_update>]]></payload>
+        <payload_hash>95100721</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>a0f37b33c3001210945e9e1d05013182</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-08-23 10:01:52</sys_created_on>
+        <sys_id>f6d087d7c3e11210945e9e1d0501316b</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1917eaf6e800000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Application Category M2M</type>
+        <update_guid>b6d087d794e11210166d27817beb436b</update_guid>
+        <update_guid_history>b6d087d794e11210166d27817beb436b:95100721</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-04 06:35:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_registry_m2m_category">sys_ux_registry_m2m_category</sys_db_object>
+        <sys_id>0cc99fb2945b499aa427a3ff51d2fd59</sys_id>
+        <sys_metadata>250ad8ed72e956106d28b4fd6d3d36e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_scope_delete display_value="">6320d1d0585d49868d4040a883e3a879</sys_scope_delete>
+        <sys_update_name>sys_ux_registry_m2m_category_250ad8ed72e956106d28b4fd6d3d36e7</sys_update_name>
+        <sys_update_version display_value="sys_ux_registry_m2m_category_250ad8ed72e956106d28b4fd6d3d36e7">f6d087d7c3e11210945e9e1d0501316b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-04 06:35:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
