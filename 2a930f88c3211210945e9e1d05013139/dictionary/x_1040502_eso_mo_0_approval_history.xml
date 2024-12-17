@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="7de64c45c3661210945e9e1d05013119" extends="x_1040502_eso_mo_0_eso_approval" label="Approval History" max_length="40" name="x_1040502_eso_mo_0_approval_history" type="collection">
+        <element label="Approval group" max_length="32" name="approval_group" reference="sys_user_group" type="reference"/>
+        <element label="Comments" max_length="40" name="comment0" type="string"/>
+        <element choice="1" label="Decision Taken" max_length="40" name="decision_taken" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="0" value="Approved"/>
+                <element inactive_on_update="false" label="Reject" sequence="1" value="Reject"/>
+                <element inactive_on_update="false" label="RFI" sequence="2" value="RFI"/>
+            </choice>
+        </element>
+        <element label="Level" max_length="40" name="level" type="string"/>
+        <element label="Parent" max_length="32" name="paren0" reference="x_1040502_eso_mo_0_eso_approval" type="reference"/>
+    </element>
+</database>
