@@ -10,6 +10,7 @@
                 <element inactive_on_update="false" label="Approved" sequence="0" value="Approval"/>
                 <element inactive_on_update="false" label="Reject" sequence="1" value="Reject"/>
                 <element inactive_on_update="false" label="RFI" sequence="2" value="RFI"/>
+                <element inactive_on_update="false" label="No Longer Required" sequence="3" value="No Longer Required"/>
             </choice>
         </element>
         <element label="Level" max_length="40" name="level" read_only="true" type="string"/>
