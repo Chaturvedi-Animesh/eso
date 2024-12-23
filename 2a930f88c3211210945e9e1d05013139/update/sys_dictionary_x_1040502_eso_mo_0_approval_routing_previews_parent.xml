@@ -33,7 +33,7 @@
         <name>x_1040502_eso_mo_0_approval_routing_previews</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference display_value="" name="x_1040502_eso_mo_0_eso_approval">x_1040502_eso_mo_0_eso_approval</reference>
         <reference_cascade_rule/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_dictionary_x_1040502_eso_mo_0_approval_routing_previews_parent</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-16 14:59:13</sys_updated_on>
+        <sys_updated_on>2024-12-18 14:18:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
