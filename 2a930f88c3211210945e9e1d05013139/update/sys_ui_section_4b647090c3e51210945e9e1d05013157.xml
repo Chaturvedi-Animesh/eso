@@ -4,13 +4,13 @@
             <element>applicant_name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>043b43dfc38a9e10945e9e1d05013126</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>2776cd6bc3a65e10945e9e1d050131fe</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,139 +18,153 @@
             <element>applicant_name.employee_number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>403b43dfc38a9e10945e9e1d05013127</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6376cd6bc3a65e10945e9e1d050131ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6b76cd6bc3a65e10945e9e1d050131ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>applicant_name.company</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>483b43dfc38a9e10945e9e1d05013127</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>637601abc3a65e10945e9e1d05013100</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>applicant_name.department</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>403b43dfc38a9e10945e9e1d05013128</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6b7601abc3a65e10945e9e1d05013100</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>priority</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>483b43dfc38a9e10945e9e1d05013128</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>637601abc3a65e10945e9e1d05013101</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>403b43dfc38a9e10945e9e1d05013129</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6b7601abc3a65e10945e9e1d05013101</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>submit_date</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>483b43dfc38a9e10945e9e1d05013129</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>637601abc3a65e10945e9e1d05013102</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>document_reference_no</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>403b43dfc38a9e10945e9e1d0501312a</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6b7601abc3a65e10945e9e1d05013102</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>routing_level</element>
-            <position>8</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>483b43dfc38a9e10945e9e1d0501312a</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>637601abc3a65e10945e9e1d05013103</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>division_name</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>403b43dfc38a9e10945e9e1d0501312b</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>6b7601abc3a65e10945e9e1d05013103</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>profit_center_name</element>
-            <position>10</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-29 03:52:24</sys_created_on>
-            <sys_id>483b43dfc38a9e10945e9e1d0501312b</sys_id>
+            <sys_created_on>2024-12-24 09:22:31</sys_created_on>
+            <sys_id>637601abc3a65e10945e9e1d05013104</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Sales Order" display_value="Sales Order" name="x_1040502_eso_mo_0_eso_approval" sys_domain="global" view="Default view">4b647090c3e51210945e9e1d05013157</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-29 03:52:24</sys_updated_on>
+            <sys_updated_on>2024-12-24 09:22:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
