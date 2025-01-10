@@ -11,7 +11,7 @@
         <column_label>Prepared By</column_label>
         <comments/>
         <create_roles/>
-        <default_value>Thi Huong Hoang </default_value>
+        <default_value>Thi Huong Hoang</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>

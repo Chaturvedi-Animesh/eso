@@ -39,7 +39,7 @@
         <message_html><![CDATA[<div style="font-family: Arial, sans-serif;">
 <h3>eSO Document&nbsp;&nbsp;</h3>
 <strong>${number}</strong> from &nbsp;${applicant_name} has been routed to you for your action.</div>
-<div style="text-align: center; margin: 20px 0;"><!-- Approve Button (Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}/params/approve-flag/true"> Approve </a> <!-- Reject Button (Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}/params/reject-flag/true"> Reject </a> <!-- RFI Button (Optional, Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}/params/rfi-flag/true"> RFI </a></div>
+<div style="text-align: center; margin: 20px 0;"><!-- Approve Button (Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}&amp;sys_action=approval"> Approve </a> <!-- Reject Button (Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}/params/reject-flag/true"> Reject </a> <!-- RFI Button (Optional, Redirect only) --> <a style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 0 10px;" href="https://dev208145.service-now.com/x/1040502/eso-workspace/record/x_1040502_eso_mo_0_eso_approval/${sys_id}/params/rfi-flag/true"> RFI </a></div>
 <h4>Application Details</h4>
 <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px;">
 <tbody>
@@ -138,7 +138,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c010062c30e5a10945e9e1d05013178</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>eso workspace</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -146,7 +146,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sysevent_email_action_4c010062c30e5a10945e9e1d05013178</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-23 05:43:52</sys_updated_on>
+        <sys_updated_on>2024-12-31 09:02:27</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Eso Mockup">91a90b0fc3a6da10945e9e1d05013109</template>
         <type>email</type>

@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae298449c3661210945e9e1d050131d6</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>Eso Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_hub_flow_ae298449c3661210945e9e1d050131d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-25 06:22:22</sys_updated_on>
+        <sys_updated_on>2025-01-07 07:49:49</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -84,9 +84,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-25 06:22:22</sys_created_on>
         <sys_id>1ed6e9f3c36e9e10945e9e1d05013143</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-25 06:22:22</sys_updated_on>
+        <sys_updated_on>2025-01-07 07:49:49</sys_updated_on>
         <trigger display_value="">5d3dc981c3ea1210945e9e1d05013188</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ae298449c3661210945e9e1d050131d6^sys_idNOT IN1ed6e9f3c36e9e10945e9e1d05013143"/>
@@ -189,29 +189,6 @@
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2b8c44cdc3661210945e9e1d050131f0"/>
-    <sys_complex_object action="INSERT_OR_UPDATE">
-        <label/>
-        <name>FDCollection</name>
-        <namespace>FlowDesigner</namespace>
-        <scope_name>global</scope_name>
-        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
-        <sys_class_name>sys_complex_object</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path/>
-        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
-        <sys_mod_count>101</sys_mod_count>
-        <sys_name/>
-        <sys_overrides/>
-        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">14178d7f8dc20210d0ad51af41866361</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Global">global</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
-        <type>complex_object_collection</type>
-    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1344,29 +1321,6 @@
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=413dc981c3ea1210945e9e1d05013142"/>
-    <sys_complex_object action="INSERT_OR_UPDATE">
-        <label/>
-        <name>FDCollection</name>
-        <namespace>FlowDesigner</namespace>
-        <scope_name>global</scope_name>
-        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
-        <sys_class_name>sys_complex_object</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path/>
-        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
-        <sys_mod_count>101</sys_mod_count>
-        <sys_name/>
-        <sys_overrides/>
-        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">14178d7f8dc20210d0ad51af41866361</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Global">global</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
-        <type>complex_object_collection</type>
-    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>

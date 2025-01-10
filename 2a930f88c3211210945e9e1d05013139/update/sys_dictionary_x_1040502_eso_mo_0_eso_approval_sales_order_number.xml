@@ -11,7 +11,7 @@
         <column_label>Sales Order Number</column_label>
         <comments/>
         <create_roles/>
-        <default_value>9513336963 </default_value>
+        <default_value>9513336963</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>

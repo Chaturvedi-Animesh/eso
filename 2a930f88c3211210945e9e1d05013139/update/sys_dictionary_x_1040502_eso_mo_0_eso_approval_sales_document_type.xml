@@ -11,7 +11,7 @@
         <column_label>Sales Document Type</column_label>
         <comments/>
         <create_roles/>
-        <default_value>XOR </default_value>
+        <default_value>XOR</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>

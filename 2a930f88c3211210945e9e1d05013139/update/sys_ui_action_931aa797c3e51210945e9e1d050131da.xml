@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>approval</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-
+    g_modal.showFields({
+        title: "Approve",
+        fields: [{
+            type: 'textarea',
+            name: 'work_notes',
+            label: getMessage('Comments'),
+            mandatory: false
+        }],
+        size: 'lg'
+    }).then(function(fieldValues) {
+        var ga = new GlideAjax('updateApprovalHistroyRecordsfromUI');
+        ga.addParam('sysparm_name', 'updateApprovalHistory');
+        ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
+        ga.addParam('sysparm_inc_comments', fieldValues.updatedFields[0].value);
+        ga.getXMLAnswer(function(response) {
+		});
+    });
 }]]></client_script_v2>
         <comments/>
         <condition/>
-        <form_action>false</form_action>
-        <form_button>false</form_button>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
         <form_button_v2>true</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
@@ -29,7 +45,7 @@
         <messages/>
         <name>Approve</name>
         <onclick/>
-        <order>80</order>
+        <order>85</order>
         <script/>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -41,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>931aa797c3e51210945e9e1d050131da</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -49,7 +65,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_931aa797c3e51210945e9e1d050131da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-08 09:55:10</sys_updated_on>
+        <sys_updated_on>2025-01-08 07:04:39</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
@@ -59,10 +75,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-04 09:36:37</sys_created_on>
         <sys_id>123a2797c3e51210945e9e1d050131da</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-04 09:36:37</sys_updated_on>
+        <sys_updated_on>2024-12-30 07:08:22</sys_updated_on>
         <table>sys_ui_action</table>
-        <use_es_latest>true</use_es_latest>
+        <use_es_latest>false</use_es_latest>
     </sys_es_latest_script>
 </record_update>

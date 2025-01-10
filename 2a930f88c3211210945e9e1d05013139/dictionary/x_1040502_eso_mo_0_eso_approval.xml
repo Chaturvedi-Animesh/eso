@@ -20,8 +20,8 @@
         <element label="% Credit Limit Used" max_length="15" name="credit_limit_used1" read_only="true" type="percent_complete"/>
         <element attributes="edge_encryption_enabled=true" label="Currency" max_length="40" name="currency" type="string"/>
         <element attributes="encode_utf8=false" default="Khach hang Shopee" label="CustomerName" max_length="32" name="customername" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="9000000114 " label="Customer Code" max_length="40" name="customer_code" read_only="true" type="string"/>
-        <element default="9000000114 " label="Customer Code (ship to party)" max_length="40" name="customer_code_ship_to_party" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="9000000114" label="Customer Code" max_length="40" name="customer_code" read_only="true" type="string"/>
+        <element default="9000000114" label="Customer Code (ship to party)" max_length="40" name="customer_code_ship_to_party" read_only="true" type="string"/>
         <element default="Khach hang Shopee" label="Customer Name" max_length="40" name="customer_name" read_only="true" type="string"/>
         <element default="VO THI HOAI THANH" label="Customer Name (ship to party)" max_length="40" name="customer_name_ship_to_party" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="241001DMQQWNSH" label="Customer PO Number" max_length="100" name="customer_po_number" read_only="true" type="string"/>
@@ -43,10 +43,10 @@
         <element default="1234253" label="Open Delivery Value" max_length="19" name="open_delivery_value" read_only="true" type="currency"/>
         <element attributes="edge_encryption_enabled=true" default="N.A." label="Customer Payment Term" max_length="40" name="open_sales_order_value" read_only="true" type="string"/>
         <element default="N.A." label="Order Reason" max_length="40" name="order_reason" read_only="true" type="string"/>
-        <element default="8,550,000.00" label="Total Sales Order Amount " max_length="40" name="otal_sales_order_amount" read_only="true" type="string"/>
+        <element default="8,550,000.00" label="Total Sales Order Amount" max_length="40" name="otal_sales_order_amount" read_only="true" type="string"/>
         <element default="Pending" label="Post Flag" max_length="40" name="post_flag" read_only="true" type="string"/>
         <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Po Date" max_length="255" name="po_date" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
-        <element default="Thi Huong Hoang " label="Prepared By" max_length="40" name="prepared_by" read_only="true" type="string"/>
+        <element default="Thi Huong Hoang" label="Prepared By" max_length="40" name="prepared_by" read_only="true" type="string"/>
         <element default="EC Team" label="Profit center Name" max_length="40" name="profit_center_name" read_only="true" type="string"/>
         <element default="1234345" label="Receivables AR Balance" max_length="19" name="receivables_ar_balance" read_only="true" type="currency"/>
         <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested Delivery Date" max_length="255" name="requested_delivery_date" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
@@ -67,18 +67,18 @@
         <element label="RFI Revision No" max_length="40" name="rfi_revision_no" type="string"/>
         <element default="002" label="Risk Category" max_length="40" name="risk_category" read_only="true" type="string"/>
         <element label="Routing Level" max_length="40" name="routing_level" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="XOR " label="Sales Document Type" max_length="40" name="sales_document_type" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="Standard Order&#10;" label="Sales Document Type Description" max_length="100" name="sales_document_type_description" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="V10 " label="Sales Group" max_length="40" name="sales_group" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="XOR" label="Sales Document Type" max_length="40" name="sales_document_type" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Standard Order" label="Sales Document Type Description" max_length="100" name="sales_document_type_description" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="V10" label="Sales Group" max_length="40" name="sales_group" read_only="true" type="string"/>
         <element default="Others" label="Sales Group Description" max_length="40" name="sales_group_description" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="9501 " label="Sales Office" max_length="40" name="sales_office" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="9501" label="Sales Office" max_length="40" name="sales_office" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true" default="1234" label="Sales Order Currency" max_length="20" name="sales_order_currency" read_only="true" type="currency"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="Sales Order Date" max_length="40" name="sales_order_date" read_only="true" type="glide_date" use_dynamic_default="true"/>
-        <element attributes="edge_encryption_enabled=true" default="9513336963 " label="Sales Order Number" max_length="100" name="sales_order_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="9513336963" label="Sales Order Number" max_length="100" name="sales_order_number" read_only="true" type="string"/>
         <element default="N.A." label="Sales Order Payment New Value" max_length="40" name="sales_order_payment_new_value" read_only="true" type="string"/>
         <element default="N.A." label="Sales Order Payment Old Value" max_length="40" name="sales_order_payment_old_value" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="7950" label="Sales Organisation" max_length="40" name="sales_organisation" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="70J9106&#10;" label="SAP ID" max_length="40" name="sap_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="70J9106" label="SAP ID" max_length="40" name="sap_id" read_only="true" type="string"/>
         <element label="Special Liability" max_length="15" name="special_liability" read_only="true" type="decimal"/>
         <element label="Submit Date" max_length="255" name="submit_date" read_only="true" type="glide_date"/>
         <element default="8,550,000.00" label="Total Condition Value" max_length="40" name="total_condition_value" read_only="true" type="string"/>

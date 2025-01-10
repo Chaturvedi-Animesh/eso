@@ -11,8 +11,7 @@
         <column_label>SAP ID</column_label>
         <comments/>
         <create_roles/>
-        <default_value>70J9106
-</default_value>
+        <default_value>70J9106</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>

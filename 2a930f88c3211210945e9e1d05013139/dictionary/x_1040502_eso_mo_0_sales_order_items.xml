@@ -9,7 +9,7 @@
         <element label="Due Date" max_length="40" name="due_dat0" type="glide_date_time"/>
         <element default="ZTAN" label="Item Cat" max_length="40" name="item_cat" type="string"/>
         <element default="Standard Item" label="Item Description" max_length="40" name="item_description" type="string"/>
-        <element default="Singapore" label="Location " max_length="40" name="locatio0" type="string"/>
+        <element default="Singapore" label="Location" max_length="40" name="locatio0" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="Panasoinc Washer 10.5kg" label="Mat.Desc" max_length="100" name="mat_desc" type="string"/>
         <element default="Wm" label="Mat Group" max_length="40" name="mat_group" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="Na-FD10AR" label="Mat.No" max_length="100" name="mat_no" type="string"/>

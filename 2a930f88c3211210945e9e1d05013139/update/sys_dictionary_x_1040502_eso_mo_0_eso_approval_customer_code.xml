@@ -11,7 +11,7 @@
         <column_label>Customer Code</column_label>
         <comments/>
         <create_roles/>
-        <default_value>9000000114 </default_value>
+        <default_value>9000000114</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>

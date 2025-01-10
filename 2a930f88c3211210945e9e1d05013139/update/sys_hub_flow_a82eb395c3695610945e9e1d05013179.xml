@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a82eb395c3695610945e9e1d05013179</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>eSO Ask Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_hub_flow_a82eb395c3695610945e9e1d05013179</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-10-29 10:30:07</sys_updated_on>
+        <sys_updated_on>2024-12-16 10:10:34</sys_updated_on>
         <type>subflow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -215,11 +215,11 @@
         <sys_created_on>2024-10-29 06:03:37</sys_created_on>
         <sys_id>4cffbb19c3695610945e9e1d050131a4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>approval_group</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a82eb395c3695610945e9e1d05013179_approval_group_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-29 06:03:37</sys_updated_on>
         <url/>
@@ -438,11 +438,11 @@
         <sys_created_on>2024-10-29 06:03:46</sys_created_on>
         <sys_id>c6ff3f19c3695610945e9e1d05013111</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>approval_group</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8afffb19c3695610945e9e1d050131d5_approval_group_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-10-29 06:03:46</sys_updated_on>
         <url/>

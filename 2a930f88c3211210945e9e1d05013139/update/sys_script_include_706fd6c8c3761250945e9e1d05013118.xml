@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_1040502_eso_mo_0.updateApprovalHistroyRecord</api_name>
         <caller_access/>
@@ -10,17 +10,24 @@
         <name>updateApprovalHistroyRecord</name>
         <script><![CDATA[var updateApprovalHistroyRecord = Class.create();
 updateApprovalHistroyRecord.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-    updateApprovalHistory: function(approvalSysid, approvalState, parentSysid) {
-		gs.info("1319091 inside line 4"+approvalSysid);
-		gs.info("1319091 inside line 5"+approvalState);
-		gs.info("1319091 inside line 6"+parentSysid);
-        var approvalRecord = new GlideRecord('x_1040502_eso_mo_0_approval_routing_previews');
-        approvalRecord.get(approvalSysid);
+
+	
+    updateApprovalHistory: function() {
+		var parameter = this.getParameter('sysparm_inc_parent');
+		gs.info("inside line 5"+parameter);
+		//var comments = this.getParameter('sysparm_inc_comments');
+		gs.info("inside line 5"+comments);
+        var approvalRecord = new GlideRecord('sysapproval_approver');
+        approvalRecord.addQuery('document_id',parameter);
+       // approvalRecord.get("2f5940a1c3f61210945e9e1d050131b0");
+        //approvalRecord.addQuery('group.assignment_group',g_form.getValue('assignment_group'));
         approvalRecord.query();
-        if (approvalRecord.next()) {
-        approvalRecord.decision_taken = approvalState;
-		approvalRecord.decision_date_time = new GlideDateTime();
-		approvalRecord.update();
+        gs.info("inside line 13"+approvalRecord.getRowCount());
+        while (approvalRecord.next()) {
+            gs.info("inside line 15");
+            approvalRecord.setValue('u_comment', comments);
+            approvalRecord.setValue('state', 'approved');
+            approvalRecord.update();
         }
     },
     type: 'updateApprovalHistroyRecord'
@@ -29,14 +36,14 @@ updateApprovalHistroyRecord.prototype = Object.extendsObject(global.AbstractAjax
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-26 05:08:41</sys_created_on>
         <sys_id>706fd6c8c3761250945e9e1d05013118</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>updateApprovalHistroyRecord</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_script_include_706fd6c8c3761250945e9e1d05013118</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-26 05:21:37</sys_updated_on>
+        <sys_updated_on>2024-12-31 03:00:01</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>706fd6c8c3761250945e9e1d05013118</id>

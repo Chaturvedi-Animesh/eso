@@ -11,8 +11,7 @@
         <column_label>Sales Document Type Description</column_label>
         <comments/>
         <create_roles/>
-        <default_value>Standard Order
-</default_value>
+        <default_value>Standard Order</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
