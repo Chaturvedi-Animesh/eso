@@ -23,14 +23,14 @@
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:20:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>85459844c3075210945e9e1d0501311d</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>Approval History Creation</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_85459844c3075210945e9e1d0501311d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 04:51:53</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -91,10 +91,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:19</sys_created_on>
         <sys_id>d1c5d484c3075210945e9e1d0501318d</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 04:51:52</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:00</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d1c5d484c3075210945e9e1d0501318d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -119,14 +119,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:19</sys_created_on>
         <sys_id>95c5d484c3075210945e9e1d0501319c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 04:51:52</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:01</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 // ... code ...&#13;
-gs.info("1319091 inside line 3"+inputs.decisionData.label);&#13;
+gs.info("1319091 inside line 3"+inputs.decisionData);&#13;
 gs.info("1319091 inside line 6"+inputs.parentSysID.sys_id);&#13;
 var arr = [];&#13;
+gs.info("1319091 inside line 7"+inputs.decisionData.label);&#13;
 arr.push(inputs.decisionData.label);&#13;
 gs.info("1319091 inside line 4"+arr.length);&#13;
 var count = 0;&#13;
@@ -702,14 +703,14 @@ var groupSysid = '';&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:19</sys_created_on>
         <sys_id>99c5d484c3075210945e9e1d050131a4</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 04:51:53</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -836,17 +837,17 @@ var groupSysid = '';&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Approval History Creation">85459844c3075210945e9e1d0501311d</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"53c51884c3075210945e9e1d050131da","name":"plan","plan_signature":null}}</plan>
-        <snapshot>cf41b80cc3875210945e9e1d050131a7</snapshot>
+        <snapshot>0ccfabb8c3c39610945e9e1d0501314c</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:27</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>53c51884c3075210945e9e1d050131da</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-07 07:22:35</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:08</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -936,10 +937,10 @@ var groupSysid = '';&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:26</sys_created_on>
         <sys_id>0fc51884c3075210945e9e1d05013184</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-07 07:22:35</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0fc51884c3075210945e9e1d05013184"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -964,23 +965,21 @@ var groupSysid = '';&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:26</sys_created_on>
         <sys_id>cbc51884c3075210945e9e1d05013191</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-07 07:22:35</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:07</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 // ... code ...&#13;
-gs.info("1319091 inside line 3"+inputs.decisionData.label);&#13;
-gs.info("1319091 inside line 6"+inputs.parentSysID);&#13;
+gs.info("1319091 inside line 3"+inputs.decisionData);&#13;
+gs.info("1319091 inside line 6"+inputs.parentSysID.sys_id);&#13;
 var arr = [];&#13;
+gs.info("1319091 inside line 7"+inputs.decisionData.label);&#13;
 arr.push(inputs.decisionData.label);&#13;
 gs.info("1319091 inside line 4"+arr.length);&#13;
 var count = 0;&#13;
 var groupSysid = '';&#13;
-var a = new GlideRecord('sys_decision_multi_result');&#13;
-a.get('2b2fc52bc3e65e10945e9e1d050131a9');&#13;
-a.query();&#13;
-if (a.next()) {&#13;
-    var b = a.label.split(',');&#13;
+&#13;
+    var b = arr.split(',');&#13;
     for (var i = 0; i &lt; b.length; i++) {&#13;
         count++;&#13;
         var c = b[i].split(': ');&#13;
@@ -994,15 +993,15 @@ if (a.next()) {&#13;
                 groupSysid = group.getUniqueValue();&#13;
             }&#13;
             gs.info("groupSysid" + groupSysid);&#13;
-            var d = new GlideRecord('x_1040502_eso_mo_0_approval_routing_previews');&#13;
+            var d = new GlideRecord('x_1040502_nsc_pe_0_approval_routing_preview');&#13;
             d.initialize();&#13;
             d.approval_group = groupSysid;&#13;
-            d.parent = '621c5c88c3075210945e9e1d050131e4';&#13;
-            d.level = count;&#13;
+            d.parent = inputs.parentSysID.sys_id;&#13;
+            d.level = parseFloat(count);&#13;
             d.insert();&#13;
         }&#13;
     }&#13;
-}&#13;
+&#13;
 })(inputs, outputs);&#13;
 </value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -1463,14 +1462,14 @@ if (a.next()) {&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-07 05:22:26</sys_created_on>
         <sys_id>4fc51884c3075210945e9e1d05013198</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-07 07:22:35</sys_updated_on>
+        <sys_updated_on>2025-01-10 05:10:08</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
