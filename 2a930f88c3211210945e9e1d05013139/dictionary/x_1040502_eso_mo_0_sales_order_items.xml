@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="132a8918c3e91210945e9e1d05013107" extends="task" label="Sales Order Items" max_length="40" name="x_1040502_eso_mo_0_sales_order_items" text_index="true" type="collection">
-        <element attributes="edge_encryption_enabled=true" default="VND" label="CUR" max_length="40" name="cur" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="VND" label="Currency" max_length="40" name="cur" type="string"/>
         <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="Dau Date" max_length="40" name="dau_date" type="glide_date" use_dynamic_default="true"/>
         <element default="0.00" label="Diff Amt. %" max_length="38" name="diff_am0" type="percent_complete"/>
         <element default="0" label="Diff Amt." max_length="40" name="diff_amt" type="string"/>

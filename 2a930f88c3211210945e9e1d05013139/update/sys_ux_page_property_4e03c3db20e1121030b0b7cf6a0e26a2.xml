@@ -13,17 +13,22 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>global</sys_domain_path>
         <sys_id>4e03c3db20e1121030b0b7cf6a0e26a2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>chrome_footer</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ux_page_property_4e03c3db20e1121030b0b7cf6a0e26a2</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-04 06:45:25</sys_updated_on>
+        <sys_updated_by>vijay</sys_updated_by>
+        <sys_updated_on>2025-01-16 18:26:24</sys_updated_on>
         <type>json</type>
-        <unique_name>x_1040502_eso_mo_0.8603c3db22e1121050d6478002949db2.root.chrome_footer</unique_name>
-        <value>{"public_page":{"enable_footer_topbar":false,"footer_topbar_options":{},"enable_footer_bar":false,"footer_bar_options":{}}}</value>
+        <unique_name>x_1040502_eso_mo_0.8603c3db22e1121050d6478002949db2.root.global.chrome_footer</unique_name>
+        <value>{
+    "public_page": {
+        "footer_topbar_options": {},
+        "footer_bar_options": {}
+    }
+}</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=4e03c3db20e1121030b0b7cf6a0e26a2"/>
 </record_update>

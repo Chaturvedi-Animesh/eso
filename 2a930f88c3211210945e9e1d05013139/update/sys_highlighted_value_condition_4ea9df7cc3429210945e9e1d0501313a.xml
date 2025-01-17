@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_highlighted_value_condition">
     <sys_highlighted_value_condition action="INSERT_OR_UPDATE">
         <color>yellow</color>
-        <conditions table="x_1040502_eso_mo_0_eso_approval">state=50^EQ<item display_value="Pending Submission" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="50"/>
+        <conditions table="x_1040502_eso_mo_0_eso_approval">state=50^EQ<item display_value="Request for information" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="50"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <form_label_description/>
