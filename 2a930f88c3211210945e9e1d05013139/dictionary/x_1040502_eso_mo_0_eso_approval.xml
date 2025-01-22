@@ -30,7 +30,7 @@
         <element attributes="edge_encryption_enabled=true" default="01" label="Division" max_length="40" name="division" read_only="true" type="string"/>
         <element label="Division Name" max_length="40" name="division_name" read_only="true" type="string"/>
         <element label="Document Reference No" max_length="40" name="document_reference_no" read_only="true" type="string"/>
-        <element choice="1" label="Document Status" max_length="40" name="document_status" read_only="true" type="choice">
+        <element choice="1" label="Document Statu" max_length="40" name="document_status" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Approved" sequence="0" value="Approved"/>
                 <element inactive_on_update="false" label="Rejected" sequence="1" value="Rejected"/>
@@ -39,6 +39,13 @@
             </choice>
         </element>
         <element default="N.A." label="Hader Text" max_length="40" name="hader_text" read_only="true" type="string"/>
+        <element label="Next Reviewer" max_length="32" name="next_reviewer" type="string"/>
+        <element choice="3" label="N / R" max_length="40" name="n_r" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Revised" sequence="1" value="revised"/>
+            </choice>
+        </element>
         <element default="13746634" label="Opening Bill Document Value" max_length="40" name="opening_bill_document_value" read_only="true" type="string"/>
         <element default="1234253" label="Open Delivery Value" max_length="19" name="open_delivery_value" read_only="true" type="currency"/>
         <element attributes="edge_encryption_enabled=true" default="N.A." label="Customer Payment Term" max_length="40" name="open_sales_order_value" read_only="true" type="string"/>
@@ -80,7 +87,7 @@
         <element attributes="edge_encryption_enabled=true" default="7950" label="Sales Organisation" max_length="40" name="sales_organisation" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="70J9106" label="SAP ID" max_length="40" name="sap_id" read_only="true" type="string"/>
         <element label="Special Liability" max_length="15" name="special_liability" read_only="true" type="decimal"/>
-        <element label="Submit Date" max_length="255" name="submit_date" read_only="true" type="glide_date"/>
+        <element label="Submit Date &amp; Time" max_length="255" name="submit_date" read_only="true" type="glide_date_time"/>
         <element default="8,550,000.00" label="Total Condition Value" max_length="40" name="total_condition_value" read_only="true" type="string"/>
         <element default="855,000" label="Total VAT Amount" max_length="40" name="total_vat_amount" read_only="true" type="string"/>
         <element label="New Name-Value Pairs" max_length="4000" name="u_simple_name_values_4" type="simple_name_values"/>

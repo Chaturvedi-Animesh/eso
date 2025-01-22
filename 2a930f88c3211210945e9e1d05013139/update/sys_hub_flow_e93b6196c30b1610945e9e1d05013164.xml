@@ -78,15 +78,15 @@
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <data>{"run_on_extended":"false","run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any"}</data>
         <identifier>e93b6196c30b1610945e9e1d05013164</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-15 07:21:55</sys_created_on>
         <sys_id>13dd71eec34f5610945e9e1d0501314d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-15 07:21:55</sys_updated_on>
+        <sys_updated_on>2025-01-22 04:11:34</sys_updated_on>
         <trigger display_value="">df881e75c3a9d610945e9e1d0501316b</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e93b6196c30b1610945e9e1d05013164^sys_idNOT IN13dd71eec34f5610945e9e1d0501314d"/>
