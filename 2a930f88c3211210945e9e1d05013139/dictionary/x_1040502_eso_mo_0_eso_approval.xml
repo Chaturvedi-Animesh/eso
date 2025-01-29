@@ -39,6 +39,7 @@
             </choice>
         </element>
         <element default="N.A." label="Hader Text" max_length="40" name="hader_text" read_only="true" type="string"/>
+        <element label="Next Approver " max_length="1024" name="next_approver" reference="sys_user" type="glide_list"/>
         <element label="Next Reviewer" max_length="32" name="next_reviewer" type="string"/>
         <element choice="3" label="N / R" max_length="40" name="n_r" type="choice">
             <choice>
