@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="1e64b098c3691210945e9e1d0501311c" extends="task" label="eSO" max_length="40" name="x_1040502_eso_mo_0_eso_approval" text_index="true" type="collection">
         <element attributes="omit_sys_original=true" label="Account Receivable Balance" max_length="20" name="account_receivable_balance" type="currency"/>
+        <element choice="1" label="After RFI" max_length="40" name="after_rfi" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Send back to me" sequence="0" value="Send back to me"/>
+                <element inactive_on_update="false" label="Start form beginning" sequence="1" value="Start form beginning"/>
+            </choice>
+        </element>
         <element label="Applicant name" max_length="32" name="applicant_name" reference="sys_user" type="reference"/>
         <element choice="1" label="Application Status" max_length="40" name="application_status" read_only="true" type="choice">
             <choice>
@@ -15,6 +21,7 @@
         <element attributes="edge_encryption_enabled=true" default="N.A." label="Bank Guarantee Expiry" max_length="40" name="bank_guarantee_expiry" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="S5 - Credit Block" label="Blocking Reason" max_length="40" name="blocking_reason" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true" label="Collection History ('000)" max_length="20" name="collection_history_000" type="currency"/>
+        <element label="Comment" max_length="40" name="comment" type="string"/>
         <element default="12345678" label="Credit Card Limit Available" max_length="19" name="credit_card_limit_available" read_only="true" type="currency"/>
         <element default="12342455" label="Credit Limit Used" max_length="20" name="credit_limit_used" read_only="true" type="currency"/>
         <element label="% Credit Limit Used" max_length="15" name="credit_limit_used1" read_only="true" type="percent_complete"/>
@@ -55,6 +62,7 @@
         <element default="Pending" label="Post Flag" max_length="40" name="post_flag" read_only="true" type="string"/>
         <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Po Date" max_length="255" name="po_date" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
         <element default="Thi Huong Hoang" label="Prepared By" max_length="40" name="prepared_by" read_only="true" type="string"/>
+        <element label="Previous Approver" max_length="32" name="previous_approver" reference="sysapproval_approver" type="reference"/>
         <element default="EC Team" label="Profit center Name" max_length="40" name="profit_center_name" read_only="true" type="string"/>
         <element default="1234345" label="Receivables AR Balance" max_length="19" name="receivables_ar_balance" read_only="true" type="currency"/>
         <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested Delivery Date" max_length="255" name="requested_delivery_date" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
@@ -68,6 +76,12 @@
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="After RFI" max_length="40" name="rfi" read_only="true" type="choice">
             <choice/>
+        </element>
+        <element choice="1" label="RFI recipient" max_length="40" name="rfi_recipien0" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Applicant" sequence="0" value="Applicant"/>
+                <element inactive_on_update="false" label="Previous Approver" sequence="1" value="Previous Approver"/>
+            </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="RFI Recipient" max_length="40" name="rfi_recipient" read_only="true" type="string">
             <choice/>

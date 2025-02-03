@@ -5,99 +5,77 @@
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
     g_modal.showFields({
-        title: getMessage("Reassign Task to Group"),
-        fields: [
+        title: "RFI Details",
+        fields: [{
+                type: 'choice',
+                name: 'after_rfi',
+                label: getMessage('After RFI'),
+                choices: [{
+                        label: '-- None --',
+                        value: 'none'
+                    },
+                    {
+                        label: 'Send Back ME',
+                        value: 'send_back_me'
+                    },
+                    {
+                        label: 'Start from Beginning',
+                        value: 'start_from_beginning'
+                    }
+                ],
+                mandatory: true
+            },
+            {
+                type: 'choice',
+                name: 'rfi_recipient',
+                label: getMessage('RFI Recipient'),
+                choices: [{
+                        label: '-- None --',
+                        value: 'none'
+                    },
+                    {
+                        label: 'Applicant',
+                        value: 'Applicant'
+                    },
+                    {
+                        label: 'Pervious Aprover',
+                        value: 'Pervious Aprover'
+                    }
+                ],
+                mandatory: true
+            },
             {
                 type: 'reference',
-                name: 'assignment_group',
-                label: getMessage('Select Assignment Group'),
-                reference: 'sys_user_group', // Refers to the sys_user_group table
+                name: 'previous_approver',
+                label: getMessage('Previous Approver'),
+                reference: 'sysapproval_approver', // Correctly referencing Approval table
+                mandatory: true
+            },
+            {
+                type: 'string',
+                name: 'approver',
+                label: getMessage('Approver'),
+                mandatory: true,
+                readonly: true
+            },
+            {
+                type: 'textarea',
+                name: 'comment',
+                label: getMessage('Comment'),
                 mandatory: true
             }
         ],
-        size: 'md'
+        size: 'lg'
     }).then(function(fieldValues) {
-        var newAssignmentGroup = fieldValues.updatedFields.find(field => field.name === 'assignment_group').value;
+        var ga = new GlideAjax('RFIApprovalHandler');
+        ga.addParam('sysparm_name', 'handleRFIApproval');
+        ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
+        ga.addParam('sysparm_current_user', g_user.userID);
+        ga.addParam('sysparm_inc_comments', getFieldValue(fieldValues, 'comment'));
 
-        // Validate the selected group
-        if (!newAssignmentGroup) {
-            g_form.addErrorMessage(getMessage('You must select an assignment group.'));
-            return;
-        }
-
-        // Notify user about ongoing reassignment
-        g_form.addInfoMessage(getMessage('Reassigning task to group...'));
-
-        // Call GlideAjax to update the group
-        var ga = new GlideAjax('TaskReassignmentHandler');
-        ga.addParam('sysparm_name', 'reassignTask');
-        ga.addParam('sysparm_sys_id', g_form.getUniqueValue());
-        ga.addParam('sysparm_assignment_group', newAssignmentGroup);
-
-        ga.getXMLAnswer(function(response) {
-            if (response === 'Success') {
-                g_form.addInfoMessage(getMessage('Task successfully reassigned to group.'));
-                g_form.refresh(); // Refresh the form to reflect changes
-            } else {
-                g_form.addErrorMessage(getMessage('Failed to reassign task: ') + response);
-            }
-        });
+        ga.getXMLAnswer(function(response) {});
     });
-}
-
-
-
-
-
-
-
-
-
-// function onReassignClick(g_form) {
-//     g_modal.showFields({
-//         title: getMessage("Reassign Task"),
-//         fields: [
-//             {
-//                 type: 'reference',
-//                 name: 'new_assignee',
-//                 label: getMessage('Select New Assignee'),
-//                 reference: 'sys_user', // Refers to the sys_user table
-//                 mandatory: true
-//             }
-//         ],
-//         size: 'md'
-//     }).then(function(fieldValues) {
-//         var newAssignee = fieldValues.updatedFields[0].value;
-
-//         // Validate the selected user
-//         if (!newAssignee) {
-//             g_form.addErrorMessage(getMessage('You must select a new assignee.'));
-//             return;
-//         }
-
-//         // Notify user about ongoing reassignment
-//         g_form.addInfoMessage(getMessage('Reassigning task...'));
-
-//         // Call GlideAjax to update the assignment
-//         var ga = new GlideAjax('TaskReassignmentHandler');
-//         ga.addParam('sysparm_name', 'reassignTask');
-//         ga.addParam('sysparm_task_id', g_form.getUniqueValue());
-//         ga.addParam('sysparm_new_assignee', newAssignee);
-
-//         ga.getXMLAnswer(function(response) {
-//             if (response === 'Success') {
-//                 g_form.addInfoMessage(getMessage('Task successfully reassigned.'));
-//                 g_form.refresh(); // Refresh the form to reflect changes
-//             } else {
-//                 g_form.addErrorMessage(getMessage('Failed to reassign task: ') + response);
-//             }
-//         });
-//     });
-// }
-
-
-
-]]></client_script_v2>
+}]]></client_script_v2>
         <comments/>
         <condition/>
         <form_action>true</form_action>
@@ -133,7 +111,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cb27034dc3211610945e9e1d0501317f</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>RFI</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -141,7 +119,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_cb27034dc3211610945e9e1d0501317f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-08 07:05:01</sys_updated_on>
+        <sys_updated_on>2025-02-03 12:43:22</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
