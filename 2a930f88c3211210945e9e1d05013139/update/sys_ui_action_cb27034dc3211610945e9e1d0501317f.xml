@@ -6,22 +6,15 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
     g_modal.showFields({
         title: "RFI Details",
-        fields: [{
+        fields:  [
+            {
                 type: 'choice',
                 name: 'after_rfi',
                 label: getMessage('After RFI'),
-                choices: [{
-                        label: '-- None --',
-                        value: 'none'
-                    },
-                    {
-                        label: 'Send Back ME',
-                        value: 'send_back_me'
-                    },
-                    {
-                        label: 'Start from Beginning',
-                        value: 'start_from_beginning'
-                    }
+                choices: [
+                    { label: '-- None --', value: 'none' },
+                    { label: 'Send Back ME', value: 'send_back_me' },
+                    { label: 'Start from Beginning', value: 'start_from_beginning' }
                 ],
                 mandatory: true
             },
@@ -29,18 +22,10 @@
                 type: 'choice',
                 name: 'rfi_recipient',
                 label: getMessage('RFI Recipient'),
-                choices: [{
-                        label: '-- None --',
-                        value: 'none'
-                    },
-                    {
-                        label: 'Applicant',
-                        value: 'Applicant'
-                    },
-                    {
-                        label: 'Pervious Aprover',
-                        value: 'Pervious Aprover'
-                    }
+                choices: [
+                    { label: '-- None --', value: 'none' },
+                    { label: 'Applicant', value: 'Applicant' },
+                    { label: 'Previous Approver', value: 'previous_approver' }  
                 ],
                 mandatory: true
             },
@@ -48,7 +33,7 @@
                 type: 'reference',
                 name: 'previous_approver',
                 label: getMessage('Previous Approver'),
-                reference: 'sysapproval_approver', // Correctly referencing Approval table
+                reference: 'sysapproval_approver', 
                 mandatory: true
             },
             {
@@ -111,7 +96,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cb27034dc3211610945e9e1d0501317f</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>RFI</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -119,7 +104,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_cb27034dc3211610945e9e1d0501317f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-03 12:43:22</sys_updated_on>
+        <sys_updated_on>2025-02-04 04:42:45</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

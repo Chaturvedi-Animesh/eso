@@ -8,14 +8,23 @@
         <description/>
         <mobile_callable>false</mobile_callable>
         <name>RFIApprovalHandler</name>
-        <script><![CDATA[var RFIApprovalHandler = Class.create();
+        <script><![CDATA[
+
+  var RFIApprovalHandler = Class.create();
 RFIApprovalHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     handleRFIApproval: function() {
         var incParent = this.getParameter('sysparm_inc_parent');
         var currentUserSysId = this.getParameter('sysparm_current_user');
-        var comments = this.getParameter('sysparm_inc_comments');
+		
+       var after_rfi = this.getParameter('sysparm_after_rfi');
+        var rfi_recipient = this.getParameter('sysparm_rfi_recipient');
+        var previous_approver = this.getParameter('sysparm_previous_approver');
+        var approver = this.getParameter('sysparm_approver');
+        var comment = test;
+        
 
+		
 
         var currentUserGroup = '';
         var currentLevel = 0;
@@ -58,10 +67,21 @@ RFIApprovalHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         approvalHistory.approval_group = currentUserGroup;
 		approvalHistory.x_1040502_eso_mo_0_assign_date_time = approvalCreatedOn;
         approvalHistory.decision_taken = 'RFI';
-        approvalHistory.comment = comments;
+        approvalHistory.comment = comment;
         approvalHistory.decision_date_time = new GlideDateTime();
         approvalHistory.level = currentLevel;
         approvalHistory.insert();
+
+		var gr = new GlideRecord('x_1040502_eso_mo_0_rfi');
+		gr.initialize();
+		gr.eso_record = incParent;
+		gr.assignment_group = currentUserGroup;
+		//gr.approval_record=;
+		gr.approver = currentUserSysId;
+		gr.assignment_groups = currentUserGroup;
+		gr.comment = comment;
+		gr.insert();
+
     },
 
     type: 'RFIApprovalHandler'
@@ -70,14 +90,14 @@ RFIApprovalHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-03 11:42:13</sys_created_on>
         <sys_id>d16fac70c3eb9610945e9e1d0501310e</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>RFIApprovalHandler</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_script_include_d16fac70c3eb9610945e9e1d0501310e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-03 13:31:40</sys_updated_on>
+        <sys_updated_on>2025-02-04 15:01:45</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>d16fac70c3eb9610945e9e1d0501310e</id>
