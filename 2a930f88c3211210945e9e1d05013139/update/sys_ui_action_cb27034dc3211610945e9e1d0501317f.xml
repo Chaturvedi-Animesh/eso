@@ -4,66 +4,97 @@
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-    g_modal.showFields({
-        title: "RFI Details",
-        fields:  [
-            {
-                type: 'choice',
-                name: 'after_rfi',
-                label: getMessage('After RFI'),
-                choices: [
-                    { displayValue: '-- None --', value: 'none' },
-                    { displayValue: 'Send Back ME', value: 'send_back_me' },
-                    { displayValue: 'Start from Beginning', value: 'start_from_beginning' }
-                ],
-                mandatory: true
-            },
-            {
-                type: 'choice',
-                name: 'rfi_recipient',
-                label: getMessage('RFI Recipient'),
-                choices: [
-                    { displayValue: '-- None --', value: 'none' },
-                    { displayValue: 'Applicant', value: 'Applicant' },
-                    { displayValue: 'Previous Approver', value: 'previous_approver' }  
-                ],
-                mandatory: false
-            },
-            // {
-            //     type: 'reference',
-            //     name: 'previous_approver',
-            //     label: getMessage('Previous Approver'),
-            //     reference: 'sysapproval_approver', 
-            //     mandatory: true
-            // },
-            // {
-            //     type: 'string',
-            //     name: 'approver',
-            //     label: getMessage('Approver'),
-            //     mandatory: true,
-            //     readonly: true
-            // },
-            {
-                type: 'textarea',
-                name: 'comment',
-                label: getMessage('Comment'),
-                mandatory: true
-            }
-        ],
-        size: 'lg'
-    }).then(function(fieldValues) {
-		console.log(fieldValues)
-		var parentId = g_form.getUniqueValue();
-		var currentUser = g_user.userID;
+    var responseParams = {
+        parentId: g_form.getUniqueValue()
+    }
+    var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+    ga.addParam('sysparm_name', 'getPreviousApprovers');
+    ga.addParam('sysparm_parentid', g_form.getUniqueValue())
+    ga.getXMLAnswer(showModal(g_form,g_user))
 
-        // var ga = new GlideAjax('RFIApprovalHandler');
-        // ga.addParam('sysparm_name', 'handleRFIApproval');
-        // ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
-        // ga.addParam('sysparm_current_user', g_user.userID);
-        // ga.addParam('sysparm_inc_comments', getFieldValue(fieldValues, 'comment'));
-        // ga.getXMLAnswer(function(response) {});
-    });
 }
+
+function showModal(g_form,g_user) {
+    return function callback(answer) {
+        var approversChoice = JSON.parse(answer)
+
+        var afterRFIChoice = [{
+                displayValue: '-- None --',
+                value: 'none'
+            },
+            {
+                displayValue: 'Send Back ME',
+                value: 'send_back_me'
+            },
+            {
+                displayValue: 'Start from Beginning',
+                value: 'start_from_beginning'
+            }
+        ]
+
+        var rfiRecipentChoice = [{
+                displayValue: '-- None --',
+                value: 'none'
+            },
+            {
+                displayValue: 'Applicant',
+                value: 'Applicant'
+            },
+            {
+                displayValue: 'Previous Approver',
+                value: 'previous_approver'
+            }
+        ]
+
+        g_modal.showFields({
+            title: "RFI Details",
+            fields: [{
+                    type: 'choice',
+                    name: 'after_rfi',
+                    label: getMessage('After RFI'),
+                    choices: afterRFIChoice,
+                    mandatory: true
+                },
+                {
+                    type: 'choice',
+                    name: 'rfi_recipient',
+                    label: getMessage('RFI Recipient'),
+                    choices: rfiRecipentChoice,
+                    mandatory: false
+                },
+                {
+                    type: 'choice',
+                    name: 'rfi_approver',
+                    label: getMessage('RFI Approver'),
+                    choices: approversChoice,
+                    mandatory: true
+                },
+                {
+                    type: 'textarea',
+                    name: 'comment',
+                    label: getMessage('Comment'),
+                    mandatory: true
+                }
+            ],
+            size: 'lg'
+        }).then(function(fieldValues) {
+			console.log(g_form)
+			console.log(g_user)
+
+            var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+            ga.addParam('sysparm_name', 'handleRFI');
+			
+            ga.getXMLAnswer(function(response) {
+                console.log("Test Log 4")
+            });
+
+        })
+
+
+
+    }
+}
+
 ]]></client_script_v2>
         <comments/>
         <condition/>
@@ -100,7 +131,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cb27034dc3211610945e9e1d0501317f</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>96</sys_mod_count>
         <sys_name>RFI</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -108,7 +139,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_cb27034dc3211610945e9e1d0501317f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-06 12:45:06</sys_updated_on>
+        <sys_updated_on>2025-02-11 03:44:48</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

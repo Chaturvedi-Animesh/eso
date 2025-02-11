@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1040502_eso_mo_0.RFIHandler</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>RFIHandler</name>
+        <script><![CDATA[var RFIHandler = Class.create();
+RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'RFIHandler',
+
+	getPreviousApprovers : function(){
+		var approver = []
+		var parentId = this.getParameter('sysparm_parentid')
+		
+		var gr = new GlideRecord('sysapproval_approver')
+		gr.addQuery('sysapproval',parentId)
+		gr.addQuery('state','approved')
+		gr.query()
+
+		while(gr.next()){
+			approver.push({
+				displayValue : gr.approver.name.getDisplayValue(),
+				value : gr.approver.sys_id.getDisplayValue()
+			})
+		}
+		return JSON.stringify(approver)
+	},
+
+	handleRFI : function(){
+		gs.info('handle function called')
+		return
+	}
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 16:57:23</sys_created_on>
+        <sys_id>fd2a3d0bc3e79250945e9e1d0501316b</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>RFIHandler</sys_name>
+        <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
+        <sys_update_name>sys_script_include_fd2a3d0bc3e79250945e9e1d0501316b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 19:20:18</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>fd2a3d0bc3e79250945e9e1d0501316b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 16:57:23</sys_created_on>
+        <sys_id>26ea710fc3e79250945e9e1d050131b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 16:57:23</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

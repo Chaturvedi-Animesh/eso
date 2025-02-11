@@ -3,7 +3,7 @@
         <action_name>approval</action_name>
         <active>true</active>
         <client>true</client>
-        <client_script_v2><![CDATA[function onClick(g_form) {
+        <client_script_v2><![CDATA[function onClick() {
     g_modal.showFields({
         title: "Approve",
         fields: [{
@@ -19,6 +19,7 @@
         ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
         ga.addParam('sysparm_inc_comments', fieldValues.updatedFields[0].value);
         ga.getXMLAnswer(function(response) {
+			
 		});
     });
 }]]></client_script_v2>
@@ -57,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>931aa797c3e51210945e9e1d050131da</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -65,7 +66,7 @@
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_931aa797c3e51210945e9e1d050131da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-08 07:04:39</sys_updated_on>
+        <sys_updated_on>2025-02-10 10:50:04</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

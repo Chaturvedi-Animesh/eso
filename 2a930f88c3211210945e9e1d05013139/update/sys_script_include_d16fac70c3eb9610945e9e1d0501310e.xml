@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
-        <active>true</active>
+        <active>false</active>
         <api_name>x_1040502_eso_mo_0.RFIApprovalHandler</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
@@ -12,14 +12,18 @@
 RFIApprovalHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     handleRFIApproval: function() {
+		gs.info("Handle SI Called")
         var incParent = this.getParameter('sysparm_inc_parent');
         var currentUserSysId = this.getParameter('sysparm_current_user');
 		
        var after_rfi = this.getParameter('sysparm_after_rfi');
         var rfi_recipient = this.getParameter('sysparm_rfi_recipient');
         var previous_approver = this.getParameter('sysparm_previous_approver');
-        var approver = this.getParameter('sysparm_approver');
-        var comment = test;
+        // var approver = this.getParameter('sysparm_approver');
+        var comment = this.getParameter('sysparm_inc_comments');
+
+
+		gs.info('incParent: ' + incParent + ', currentUserSysId: ' + currentUserSysId + ', after_rfi: ' + after_rfi + ', rfi_recipient: ' + rfi_recipient + ', previous_approver: ' + previous_approver + ', comment: ' + comment);
         
 
 		
@@ -97,14 +101,14 @@ RFIApprovalHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-03 11:42:13</sys_created_on>
         <sys_id>d16fac70c3eb9610945e9e1d0501310e</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>RFIApprovalHandler</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_script_include_d16fac70c3eb9610945e9e1d0501310e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-06 06:23:44</sys_updated_on>
+        <sys_updated_on>2025-02-10 16:53:11</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>d16fac70c3eb9610945e9e1d0501310e</id>
