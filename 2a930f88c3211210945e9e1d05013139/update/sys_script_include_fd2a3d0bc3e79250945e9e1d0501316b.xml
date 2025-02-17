@@ -18,7 +18,7 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         var parentId = this.getParameter('sysparm_parentid');
 
         var gr = new GlideRecord('sysapproval_approver');
-        gr.addQuery('sysapproval', parentId);
+        gr.addQuery('document_id', parentId);
         gr.addQuery('state', 'approved');
         gr.query();
 
@@ -34,19 +34,16 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     handleRFI: function() {
         var incParent = this.getParameter('sysparm_inc_parent');
         var currentUserSysId = this.getParameter('sysparm_current_user');
-
         var after_rfi = this.getParameter('sysparm_after_rfi');
         var rfi_recipient = this.getParameter('sysparm_rfi_recipient');
         var previous_approver = this.getParameter('sysparm_previous_approver');
         var comment = this.getParameter('sysparm_inc_comments');
-
-
-        gs.info('incParent: ' + incParent + ', currentUserSysId: ' + currentUserSysId + ', after_rfi: ' + after_rfi + ', rfi_recipient: ' + rfi_recipient + ', previous_approver: ' + previous_approver + ', comment: ' + comment);
+        var approvalGrp;
 
         // Update Parent Record
         var gr = new GlideRecord('x_1040502_eso_mo_0_eso_approval')
         if (gr.get(incParent)) {
-            gs.info("Record Found");
+            approvalGrp = gr.getValue('assignment_group')
             gr.setValue('state', 50);
             gr.setValue('after_rfi', after_rfi);
 
@@ -57,46 +54,122 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                 gr.setValue('assigned_to', previous_approver);
             }
             if (after_rfi == 'Start from beginning') {
-                //Cancel the flow
+                var now_GR = new GlideRecord("sys_flow_context");
+                now_GR.addQuery("name", "eso");
+                now_GR.addQuery('source_record', incParent);
+                now_GR.addEncodedQuery('stateINWAITING');
+                now_GR.query();
+                while (now_GR.next()) {
+                    sn_fd.FlowAPI.cancel(now_GR.getUniqueValue(), 'Cancelling this flow for redundant request');
+                }
             } else {
                 gr.setValue('pervious_approvers', currentUserSysId);
             }
             gr.update();
         }
+
+        // Get Created On
+
+        var grApproval = new GlideRecord('sysapproval_approver')
+        grApproval.addQuery('sysapproval', incParent);
+        grApproval.addQuery('approver', previous_approver)
+        grApproval.orderByDesc('sys_created_on');
+        grApproval.setLimit(1);
+        grApproval.query();
+        if (!grApproval.next()) {
+            gs.info("Unable to create Approval History sysapproval_approver");
+            return;
+        }
+
+        var approvalCreatedOn = grApproval.sys_created_on;
+
+        // Get level
+        var level = this.getLevel(incParent, approvalGrp);
+
+        gs.info("Level: " + level)
+
+        var grApprovalHistory = new GlideRecord('x_1097202_epos_approval_history');
+        grApprovalHistory.initialize();
+        grApprovalHistory.setValue('parent', incParent);
+        grApprovalHistory.setValue('level', level);
+        grApprovalHistory.setValue('approval_group', approvalGrp);
+        grApprovalHistory.setValue('decision_date_time', new GlideDateTime());
+        grApprovalHistory.setValue('decision_taken', 'RFI');
+        grApprovalHistory.setValue('comment', comment);
+        grApprovalHistory.setValue('x_1040502_eso_mo_0_assign_date_time', approvalCreatedOn);
+        grApprovalHistory.setValue('approver', currentUserSysId);
+        grApprovalHistory.insert();
+
     },
 
     handleRFIResponse: function() {
-        var incParent = this.getParameter('sysparm_inc_parent');
-        var comment = this.getParameter('sysparm_inc_comments');
-		gs.info('incParent: ' + incParent + ', comment: ' + comment);
-        var gr = new GlideRecord('x_1040502_eso_mo_0_eso_approval')
-        if (gr.get(incParent)) {
-            var afterRfi = gr.getValue('after_rfi')
+        try {
+            var incParent = this.getParameter('sysparm_inc_parent');
+            var comment = this.getParameter('sysparm_inc_comments');
+            gs.info('incParent: ' + incParent + ', comment: ' + comment);
+            var gr = new GlideRecord('x_1040502_eso_mo_0_eso_approval')
+            if (!gr.get(incParent)) {
+                gs.info('Record Not Found');
+                return;
+            }
+            var afterRfi = gr.getValue('after_rfi');
+            var level = gr.getValue('assigned_to') == gr.getValue('applicant_name') ? '0' : this.getLevel(incParent, gr.getValue('assignment_group'))
+            var approvalCreatedOn = gr.getValue('sys_updated_on');
+            var approvalGrp = gr.getValue('assigned_to') == gr.getValue('applicant_name') ? '' : gr.setValue('assignment_group');
             gr.setValue('state', -5);
             gr.setValue('work_notes', comment);
-            if (afterRFI == 'Send back to me') {
+            if (afterRfi == 'Send back to me') {
                 gr.setValue('assigned_to', gr.pervious_approvers);
             }
             gr.update();
-        } else {
-            gs.info('Record Not Found');
-        }
 
+            // create approval history
+
+
+
+            var grApprovalHistory = new GlideRecord('x_1097202_epos_approval_history');
+            grApprovalHistory.initialize();
+            grApprovalHistory.setValue('parent', incParent);
+            grApprovalHistory.setValue('level', level);
+            grApprovalHistory.setValue('approval_group', approvalGrp);
+            grApprovalHistory.setValue('decision_date_time', new GlideDateTime());
+            grApprovalHistory.setValue('decision_taken', 'RFI Response');
+            grApprovalHistory.setValue('comment', comment);
+            grApprovalHistory.setValue('x_1040502_eso_mo_0_assign_date_time', approvalCreatedOn);
+            grApprovalHistory.setValue('approver', gs.getUserID());
+            grApprovalHistory.insert();
+        } catch (err) {
+            console.log(err)
+        }
     },
+
+    getLevel: function(parentId, approvalGrp) {
+        var grRoutingPreview = new GlideRecord('x_1040502_eso_mo_0_approval_routing_previews');
+        grRoutingPreview.addQuery('parent', parentId);
+        grRoutingPreview.addQuery('approval_group', approvalGrp)
+        grRoutingPreview.setLimit(1);
+        grRoutingPreview.query();
+        if (!grRoutingPreview.next()) {
+            gs.info("Unable to create Approval History x_1040502_eso_mo_0_approval_routing_previews");
+            return;
+        }
+        return grRoutingPreview.getValue('level');
+
+    }
 
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-10 16:57:23</sys_created_on>
         <sys_id>fd2a3d0bc3e79250945e9e1d0501316b</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>RFIHandler</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_script_include_fd2a3d0bc3e79250945e9e1d0501316b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-11 11:04:08</sys_updated_on>
+        <sys_updated_on>2025-02-17 03:49:22</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>fd2a3d0bc3e79250945e9e1d0501316b</id>

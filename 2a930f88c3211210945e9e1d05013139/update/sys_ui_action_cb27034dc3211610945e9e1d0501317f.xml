@@ -7,11 +7,10 @@
     var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
     ga.addParam('sysparm_name', 'getPreviousApprovers');
     ga.addParam('sysparm_parentid', g_form.getUniqueValue());
-    ga.getXMLAnswer(showModal(g_form,g_user));
-
+    ga.getXMLAnswer(showModal(g_form, g_user));
 }
 
-function showModal(g_form,g_user) {
+function showModal(g_form, g_user) {
     return function callback(answer) {
         var approversChoice = JSON.parse(answer);
 
@@ -50,52 +49,172 @@ function showModal(g_form,g_user) {
                     name: 'after_rfi',
                     label: getMessage('After RFI'),
                     choices: afterRFIChoice,
-                    mandatory: true
+                    mandatory: true,
                 },
                 {
                     type: 'choice',
                     name: 'rfi_recipient',
                     label: getMessage('RFI Recipient'),
                     choices: rfiRecipentChoice,
-                    mandatory: false
-                },
-                {
-                    type: 'choice',
-                    name: 'rfi_approver',
-                    label: getMessage('RFI Approver'),
-                    choices: approversChoice,
-                    mandatory: true
+                    mandatory: false,
                 },
                 {
                     type: 'textarea',
                     name: 'comment',
                     label: getMessage('Comment'),
-                    mandatory: true
-                }
+                    mandatory: true,
+                },
             ],
             size: 'lg'
-        }).then(function(fieldValues) {
-			console.log(fieldValues);
+        }).then(function(selectedType) {
+            if (selectedType.updatedFields[1].value === 'Previous Approver') {
+                g_modal.showFields({
+                    title: "RFI Details",
+                    fields: {
+                        type: 'choice',
+                        name: 'rfi_approver',
+                        label: getMessage('RFI Approver'),
+                        choices: approversChoice,
+                        mandatory: true,
+                    },
+                    size: 'lg'
+                }).then(function(newWorkNote) {
+                    var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+                    ga.addParam('sysparm_name', 'handleRFI');
+                    ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
+                    ga.addParam('sysparm_current_user', g_user.userID);
+                    ga.addParam('sysparm_after_rfi', newWorkNote.updatedFields[0].value);
+                    ga.addParam('sysparm_rfi_recipient', newWorkNote.updatedFields[1].value);
+                    ga.addParam('sysparm_previous_approver', selectedType.updatedFields[0].value);
+                    ga.addParam('sysparm_inc_comments', newWorkNote.updatedFields[1].value);
 
-            var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
-            ga.addParam('sysparm_name', 'handleRFI');
-			ga.addParam('sysparm_inc_parent',g_form.getUniqueValue());
-			ga.addParam('sysparm_current_user',g_user.userID);
-			ga.addParam('sysparm_after_rfi',fieldValues.updatedFields[0].value);
-			ga.addParam('sysparm_rfi_recipient',fieldValues.updatedFields[1].value);
-			ga.addParam('sysparm_previous_approver',fieldValues.updatedFields[2].value);
-			ga.addParam('sysparm_inc_comments',fieldValues.updatedFields[3].value);
-			
-            ga.getXMLAnswer(function(response) {
-                console.log("Test Log 4");
-            });
+                    ga.getXMLAnswer(function(response) {
+                        console.log("Test Log 4");
+                    });
+                });
+            } else {
+                var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+                ga.addParam('sysparm_name', 'handleRFI');
+                ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
+                ga.addParam('sysparm_current_user', g_user.userID);
+                ga.addParam('sysparm_after_rfi', selectedType.updatedFields[0].value);
+                ga.addParam('sysparm_rfi_recipient', selectedType.updatedFields[1].value);
+                ga.addParam('sysparm_inc_comments', selectedType.updatedFields[2].value);
 
-        })
-
-
-
+                ga.getXMLAnswer(function(response) {
+                    console.log("Test Log 4");
+                });
+            }
+        });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function onClick(g_form) {
+//     var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+//     ga.addParam('sysparm_name', 'getPreviousApprovers');
+//     ga.addParam('sysparm_parentid', g_form.getUniqueValue());
+//     ga.getXMLAnswer(showModal(g_form, g_user));
+// }
+
+// function showModal(g_form, g_user) {
+//     return function callback(answer) {
+//         var approversChoice = JSON.parse(answer);
+
+//         var afterRFIChoice = [{
+//                 displayValue: '-- None --',
+//                 value: 'none'
+//             },
+//             {
+//                 displayValue: 'Send back to me',
+//                 value: 'Send back to me'
+//             },
+//             {
+//                 displayValue: 'Start from beginning',
+//                 value: 'Start from beginning'
+//             }
+//         ];
+
+//         var rfiRecipentChoice = [{
+//                 displayValue: '-- None --',
+//                 value: 'none'
+//             },
+//             {
+//                 displayValue: 'Applicant',
+//                 value: 'Applicant'
+//             },
+//             {
+//                 displayValue: 'Previous Approver',
+//                 value: 'Previous Approver'
+//             }
+//         ];
+
+//         g_modal.showFields({
+//             title: "RFI Details",
+//             fields: [{
+//                     type: 'choice',
+//                     name: 'after_rfi',
+//                     label: getMessage('After RFI'),
+//                     choices: afterRFIChoice,
+//                     mandatory: true
+//                 },
+//                 {
+//                     type: 'choice',
+//                     name: 'rfi_recipient',
+//                     label: getMessage('RFI Recipient'),
+//                     choices: rfiRecipentChoice,
+//                     mandatory: false
+//                 },
+//                 {
+//                     type: 'choice',
+//                     name: 'rfi_approver',
+//                     label: getMessage('RFI Approver'),
+//                     choices: approversChoice,
+//                     mandatory: true
+//                 },
+//                 {
+//                     type: 'textarea',
+//                     name: 'comment',
+//                     label: getMessage('Comment'),
+//                     mandatory: true
+//                 }
+//             ],
+//             size: 'lg'
+//         }).then(function(fieldValues) {
+//             console.log(fieldValues);
+
+//             var ga = new GlideAjax('x_1040502_eso_mo_0.RFIHandler');
+//             ga.addParam('sysparm_name', 'handleRFI');
+//             ga.addParam('sysparm_inc_parent', g_form.getUniqueValue());
+//             ga.addParam('sysparm_current_user', g_user.userID);
+//             ga.addParam('sysparm_after_rfi', fieldValues.updatedFields[0].value);
+//             ga.addParam('sysparm_rfi_recipient', fieldValues.updatedFields[1].value);
+//             ga.addParam('sysparm_previous_approver', fieldValues.updatedFields[2].value);
+//             ga.addParam('sysparm_inc_comments', fieldValues.updatedFields[3].value);
+
+//             ga.getXMLAnswer(function(response) {
+//                 console.log("Test Log 4");
+//             });
+//         });
+//     }
+// }
+
 
 ]]></client_script_v2>
         <comments/>
@@ -133,7 +252,7 @@ function showModal(g_form,g_user) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cb27034dc3211610945e9e1d0501317f</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>139</sys_mod_count>
         <sys_name>RFI</sys_name>
         <sys_overrides/>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
@@ -141,7 +260,7 @@ function showModal(g_form,g_user) {
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ui_action_cb27034dc3211610945e9e1d0501317f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-11 10:45:19</sys_updated_on>
+        <sys_updated_on>2025-02-16 18:03:02</sys_updated_on>
         <table>x_1040502_eso_mo_0_eso_approval</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
