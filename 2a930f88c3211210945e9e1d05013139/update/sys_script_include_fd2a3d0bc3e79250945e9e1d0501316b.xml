@@ -13,9 +13,9 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     type: 'RFIHandler',
 
-    getPreviousApprovers: function() {
+    getPreviousApprovers: function(parent) {
         var approver = [];
-        var parentId = this.getParameter('sysparm_parentid');
+        var parentId = this.getParameter('sysparm_parentid') || parent;
 
         var gr = new GlideRecord('sysapproval_approver');
         gr.addQuery('document_id', parentId);
@@ -24,21 +24,25 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
         while (gr.next()) {
             approver.push({
-                displayValue: gr.approver.name.getDisplayValue(),
-                value: gr.approver.sys_id.getDisplayValue()
+                label: gr.approver.name.getDisplayValue(),
+                id: gr.approver.sys_id.getDisplayValue()
             });
         }
+
+		gs.info("TESTING VALUE "+JSON.stringify(approver))
         return JSON.stringify(approver);
     },
 
-    handleRFI: function() {
-        var incParent = this.getParameter('sysparm_inc_parent');
-        var currentUserSysId = this.getParameter('sysparm_current_user');
-        var after_rfi = this.getParameter('sysparm_after_rfi');
-        var rfi_recipient = this.getParameter('sysparm_rfi_recipient');
-        var previous_approver = this.getParameter('sysparm_previous_approver');
-        var comment = this.getParameter('sysparm_inc_comments');
+    handleRFI: function(parent,userid,afterRFI,rfiRecipient,previousApprover,cmmnt) {
+        var incParent = this.getParameter('sysparm_inc_parent') || parent;
+        var currentUserSysId = this.getParameter('sysparm_current_user') || userid;
+        var after_rfi = this.getParameter('sysparm_after_rfi') || afterRFI;
+        var rfi_recipient = this.getParameter('sysparm_rfi_recipient') || rfiRecipient;
+        var previous_approver = this.getParameter('sysparm_previous_approver') || previousApprover;
+        var comment = this.getParameter('sysparm_inc_comments') || cmmnt;
         var approvalGrp;
+
+		gs.info('incParent: ' + incParent + ', currentUserSysId: ' + currentUserSysId + ', after_rfi: ' + after_rfi + ', rfi_recipient: ' + rfi_recipient + ', previous_approver: ' + previous_approver +', comment: ' + comment);
 
         // Update Parent Record
         var gr = new GlideRecord('x_1040502_eso_mo_0_eso_approval')
@@ -48,12 +52,12 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             gr.setValue('after_rfi', after_rfi);
 
 
-            if (rfi_recipient == 'Applicant') {
+            if (rfi_recipient == 'applicant') {
                 gr.setValue('assigned_to', gr.applicant_name);
             } else {
                 gr.setValue('assigned_to', previous_approver);
             }
-            if (after_rfi == 'Start from beginning') {
+            if (after_rfi == 'start_from_beginning') {
                 var now_GR = new GlideRecord("sys_flow_context");
                 now_GR.addQuery("name", "eso");
                 now_GR.addQuery('source_record', incParent);
@@ -118,7 +122,7 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             var approvalGrp = gr.getValue('assigned_to') == gr.getValue('applicant_name') ? '' : gr.setValue('assignment_group');
             gr.setValue('state', -5);
             gr.setValue('work_notes', comment);
-            if (afterRfi == 'Send back to me') {
+            if (afterRfi == 'send_back_to_me') {
                 gr.setValue('assigned_to', gr.pervious_approvers);
             }
             gr.update();
@@ -162,14 +166,14 @@ RFIHandler.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-10 16:57:23</sys_created_on>
         <sys_id>fd2a3d0bc3e79250945e9e1d0501316b</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>RFIHandler</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_script_include_fd2a3d0bc3e79250945e9e1d0501316b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-17 03:49:22</sys_updated_on>
+        <sys_updated_on>2025-02-25 04:25:21</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>fd2a3d0bc3e79250945e9e1d0501316b</id>

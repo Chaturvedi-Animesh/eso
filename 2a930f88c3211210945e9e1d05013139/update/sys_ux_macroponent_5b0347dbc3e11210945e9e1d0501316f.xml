@@ -6024,8 +6024,8 @@
                                                                             "value": null
                                                                         },
                                                                         "messages": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "[]"
+                                                                            "container": [],
+                                                                            "type": "LIST_CONTAINER"
                                                                         },
                                                                         "min": {
                                                                             "type": "JSON_LITERAL",
@@ -6674,7 +6674,7 @@
                                 "eventMappings": [],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
-                                    "value": null
+                                    "value": false
                                 },
                                 "preset": {
                                     "controllerElementId": "record",
@@ -6705,10 +6705,54 @@
                                 },
                                 "elementId": "button_4",
                                 "elementLabel": "Button 4",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "ddFTHSvHaBEccVeeddGwNwbwTCqfc",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "x_1040502_eso_mo_0.MODAL_SELECTED_RELAY_5b0347dbc3e11210945e9e1d0501316f",
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {
+                                                            "bare": false,
+                                                            "displayOptions": null,
+                                                            "headerLabel": null,
+                                                            "modalId": "[component-id$='rfi_popup']",
+                                                            "preserveState": null,
+                                                            "showModal": true,
+                                                            "viewportElementId": null,
+                                                            "viewportFields": null,
+                                                            "viewportParams": null,
+                                                            "viewportRoute": null
+                                                        }
+                                                    },
+                                                    "sysId": "24c3f7a7c32d5210945e9e1d05013102"
+                                                },
+                                                "operation": null,
+                                                "targetId": "IeeTYbeehhVKAkPqjjUiiAVLijCreeddC",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
-                                    "value": true
+                                    "value": false
                                 },
                                 "preset": null,
                                 "propertyValues": {
@@ -6732,7 +6776,7 @@
                                                 "value": {
                                                     "code": null,
                                                     "comment": "",
-                                                    "message": "RFI"
+                                                    "message": "RFI(W)"
                                                 }
                                             },
                                             "queries": [
@@ -7722,7 +7766,53 @@
                                 },
                                 "elementId": "select_1",
                                 "elementLabel": "Select 1",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "PBYrFfxfCkVejjccQGlDVviiddjjj",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "after_rfi"
+                                                            },
+                                                            "value": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "value"
+                                                                    ]
+                                                                },
+                                                                "type": "EVENT_PAYLOAD_BINDING"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "InCTLvedAkUTjjgICAeehhVLDsUn",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -7805,14 +7895,14 @@
                                                 "container": {
                                                     "id": {
                                                         "type": "JSON_LITERAL",
-                                                        "value": "usr1"
+                                                        "value": "send_back_to_me"
                                                     },
                                                     "label": {
                                                         "type": "TRANSLATION_LITERAL",
                                                         "value": {
                                                             "code": null,
                                                             "comment": "",
-                                                            "message": "Start from beginning"
+                                                            "message": "Send back to me"
                                                         }
                                                     }
                                                 },
@@ -7822,14 +7912,14 @@
                                                 "container": {
                                                     "id": {
                                                         "type": "JSON_LITERAL",
-                                                        "value": "usr2"
+                                                        "value": "start_from_beginning"
                                                     },
                                                     "label": {
                                                         "type": "TRANSLATION_LITERAL",
                                                         "value": {
                                                             "code": null,
                                                             "comment": "",
-                                                            "message": "Send back to me"
+                                                            "message": "Start from beginning"
                                                         }
                                                     }
                                                 },
@@ -7863,8 +7953,8 @@
                                         "value": false
                                     },
                                     "messages": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "[]"
+                                        "container": [],
+                                        "type": "LIST_CONTAINER"
                                     },
                                     "optional": {
                                         "type": "JSON_LITERAL",
@@ -7880,7 +7970,7 @@
                                     },
                                     "search": {
                                         "type": "JSON_LITERAL",
-                                        "value": "initial"
+                                        "value": "none"
                                     },
                                     "selectedItem": {
                                         "type": "JSON_LITERAL",
@@ -7901,7 +7991,53 @@
                                 },
                                 "elementId": "select_2",
                                 "elementLabel": "Select 2",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "UinznvbEAkUIjjzcGXaayreebyg",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "rfi_recipient"
+                                                            },
+                                                            "value": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "value"
+                                                                    ]
+                                                                },
+                                                                "type": "EVENT_PAYLOAD_BINDING"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "YjroTfddfDkniieeddDEGwuuyNiijz",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -7979,43 +8115,14 @@
                                         "value": false
                                     },
                                     "items": {
-                                        "container": [
-                                            {
-                                                "container": {
-                                                    "id": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": "usr1"
-                                                    },
-                                                    "label": {
-                                                        "type": "TRANSLATION_LITERAL",
-                                                        "value": {
-                                                            "code": null,
-                                                            "comment": "",
-                                                            "message": "Send back to me"
-                                                        }
-                                                    }
-                                                },
-                                                "type": "MAP_CONTAINER"
-                                            },
-                                            {
-                                                "container": {
-                                                    "id": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": "usr2"
-                                                    },
-                                                    "label": {
-                                                        "type": "TRANSLATION_LITERAL",
-                                                        "value": {
-                                                            "code": null,
-                                                            "comment": "",
-                                                            "message": "Start from beginning"
-                                                        }
-                                                    }
-                                                },
-                                                "type": "MAP_CONTAINER"
-                                            }
-                                        ],
-                                        "type": "LIST_CONTAINER"
+                                        "binding": {
+                                            "address": [
+                                                "rfidetailstransform_1",
+                                                "output",
+                                                "rfiRecipient"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
                                     },
                                     "itemsListConstrain": {
                                         "type": "JSON_LITERAL",
@@ -8042,8 +8149,178 @@
                                         "value": false
                                     },
                                     "messages": {
+                                        "container": [],
+                                        "type": "LIST_CONTAINER"
+                                    },
+                                    "optional": {
                                         "type": "JSON_LITERAL",
-                                        "value": "[]"
+                                        "value": false
+                                    },
+                                    "readonly": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "required": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "search": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "none"
+                                    },
+                                    "selectedItem": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "size": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "md"
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "8592cf18d86865b5e96975a1294ed7a4",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "select_3",
+                                "elementLabel": "Select 3",
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "ZbkfDPvQAkpeeddjjffcGhSTaapeevy",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_select.NOW_SELECT#SELECTED_ITEM_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "previous_approver"
+                                                            },
+                                                            "value": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "value"
+                                                                    ]
+                                                                },
+                                                                "type": "EVENT_PAYLOAD_BINDING"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "HbbpwxeehhUaaAExhhjjtEMgnlufcHv",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "isHidden": {
+                                    "operation": {
+                                        "left": {
+                                            "binding": {
+                                                "address": [
+                                                    "rfi_recipient"
+                                                ]
+                                            },
+                                            "type": "STATE_BINDING"
+                                        },
+                                        "operator": "NOT_EQUAL",
+                                        "right": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "previous_approver"
+                                        }
+                                    },
+                                    "type": "BINARY"
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "autofocus": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "configAria": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "disabled": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "fieldLayout": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {
+                                            "layout": "vertical"
+                                        }
+                                    },
+                                    "helperContent": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "hideRequiredIndicator": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "invalid": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "items": {
+                                        "binding": {
+                                            "address": [
+                                                "rfidetailstransform_1",
+                                                "output",
+                                                "previousApprovers"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
+                                    },
+                                    "itemsListConstrain": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
+                                    },
+                                    "label": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Previous Approver"
+                                        }
+                                    },
+                                    "landmark": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "manageInvalid": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "manageSelectedItem": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "messages": {
+                                        "container": [],
+                                        "type": "LIST_CONTAINER"
                                     },
                                     "optional": {
                                         "type": "JSON_LITERAL",
@@ -8080,7 +8357,53 @@
                                 },
                                 "elementId": "textarea_1",
                                 "elementLabel": "Textarea 1",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "SSccxhvtkBaaDXeeddAYFeeLiipccFffM",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_textarea.NOW_TEXTAREA#VALUE_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "comment"
+                                                            },
+                                                            "value": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "value"
+                                                                    ]
+                                                                },
+                                                                "type": "EVENT_PAYLOAD_BINDING"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "eehhbbaaBaeehhEaDkKzjjQMHOgFzqddyu",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -8206,8 +8529,8 @@
                                         "value": null
                                     },
                                     "messages": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "[]"
+                                        "container": [],
+                                        "type": "LIST_CONTAINER"
                                     },
                                     "minlength": {
                                         "type": "JSON_LITERAL",
@@ -8250,8 +8573,7 @@
                                         "value": "md"
                                     },
                                     "value": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
+                                        "type": "JSON_LITERAL"
                                     }
                                 },
                                 "slot": null,
@@ -8268,6 +8590,10 @@
                                     },
                                     {
                                         "element_id": "select_2",
+                                        "styles": {}
+                                    },
+                                    {
+                                        "element_id": "select_3",
                                         "styles": {}
                                     },
                                     {
@@ -8373,16 +8699,114 @@
                                                         },
                                                         "elementId": "button_1",
                                                         "elementLabel": "Button 1",
-                                                        "eventMappings": [],
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "RRKynvxQBaaIKjjciiNeeddHFChdXG",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": {
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {}
+                                                                            },
+                                                                            "sysId": "156238a7c33b1210945e9e1d05013148"
+                                                                        },
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": null,
+                                                                        "targetId": "aarlSvfLkAUGUeeddFYKCKJspaoI",
+                                                                        "type": "CLIENT_SCRIPT"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": {
+                                                                            "dataBrokerId": "95ca59abc3fb1210945e9e1d0501318a",
+                                                                            "operationName": "EXECUTE",
+                                                                            "parentResourceId": "process_rfi_1",
+                                                                            "payload": {
+                                                                                "container": {
+                                                                                    "afterRFI": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "after_rfi"
+                                                                                            ]
+                                                                                        },
+                                                                                        "type": "STATE_BINDING"
+                                                                                    },
+                                                                                    "comment": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "comment"
+                                                                                            ]
+                                                                                        },
+                                                                                        "type": "STATE_BINDING"
+                                                                                    },
+                                                                                    "parent": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "sysId"
+                                                                                            ],
+                                                                                            "category": "props"
+                                                                                        },
+                                                                                        "type": "CONTEXT_BINDING"
+                                                                                    },
+                                                                                    "previousApprover": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "previous_approver"
+                                                                                            ]
+                                                                                        },
+                                                                                        "type": "STATE_BINDING"
+                                                                                    },
+                                                                                    "rfiRecipient": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "rfi_recipient"
+                                                                                            ]
+                                                                                        },
+                                                                                        "type": "STATE_BINDING"
+                                                                                    },
+                                                                                    "userid": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "user",
+                                                                                                "sys_id"
+                                                                                            ],
+                                                                                            "category": "session"
+                                                                                        },
+                                                                                        "type": "CONTEXT_BINDING"
+                                                                                    }
+                                                                                },
+                                                                                "type": "MAP_CONTAINER"
+                                                                            }
+                                                                        },
+                                                                        "targetId": "iipCeeeehhMNBUZujjeeMGtkhhdghhWs",
+                                                                        "type": "DATABROKER_OP"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
                                                         "isHidden": {
                                                             "type": "JSON_LITERAL",
                                                             "value": null
                                                         },
-                                                        "preset": {
-                                                            "controllerElementId": "record",
-                                                            "disabledEventTargetIds": [],
-                                                            "id": "2c9b775ba59d59482acacfd67c793517"
-                                                        },
+                                                        "preset": null,
                                                         "propertyValues": {
                                                             "configAria": {
                                                                 "type": "JSON_LITERAL",
@@ -8436,11 +8860,7 @@
                                                             "type": "JSON_LITERAL",
                                                             "value": null
                                                         },
-                                                        "preset": {
-                                                            "controllerElementId": "record",
-                                                            "disabledEventTargetIds": [],
-                                                            "id": "2c9b775ba59d59482acacfd67c793517"
-                                                        },
+                                                        "preset": null,
                                                         "propertyValues": {
                                                             "configAria": {
                                                                 "type": "JSON_LITERAL",
@@ -11131,6 +11551,63 @@
             }
         },
         "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "57f10867c3371210945e9e1d0501317b",
+            "type": "TRANSFORM"
+        },
+        "elementId": "rfidetailstransform_1",
+        "elementLabel": "RFIDetailsTransform 1",
+        "eventMappings": [],
+        "inputValues": {
+            "sys_id": {
+                "binding": {
+                    "address": [
+                        "sysId"
+                    ],
+                    "category": "props"
+                },
+                "type": "CONTEXT_BINDING"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "95ca59abc3fb1210945e9e1d0501318a",
+            "type": "TRANSFORM"
+        },
+        "elementId": "process_rfi_1",
+        "elementLabel": "Process RFI 1",
+        "eventMappings": [],
+        "inputValues": {
+            "afterRFI": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "comment": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "parent": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "previousApprover": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "rfiRecipient": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "userid": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            }
+        },
+        "readEvaluationMode": "EXPLICIT"
     }
 ]</data>
         <description/>
@@ -11651,6 +12128,9 @@
   "message" : "Posting Status",
   "comment" : ""
 }, {
+  "message" : "Previous Approver",
+  "comment" : ""
+}, {
   "message" : "Priority",
   "comment" : ""
 }, {
@@ -11661,6 +12141,9 @@
   "comment" : ""
 }, {
   "message" : "RFI recipient",
+  "comment" : ""
+}, {
+  "message" : "RFI(W)",
   "comment" : ""
 }, {
   "message" : "Record Information",
@@ -11711,12 +12194,40 @@
         <state_persistence_config/>
         <state_properties>[
     {
-        "id": "dtYvQ47kWC0hC9TMIcqpZJcna",
+        "fieldType": "string",
+        "id": "0rrq647FwB0qf43CQP2XbnBxAP",
+        "initialValue": null,
+        "name": "after_rfi",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "id": "ShBUE47H47CkCl9fwByz047TLeG",
         "initialValue": {
             "type": "JSON_LITERAL",
             "value": null
         },
-        "name": "newClientStateParam1",
+        "name": "rfi_recipient",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "id": "16Yomfi1AkAD90UInCr7PQDx",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "name": "comment",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "id": "A9HkPf8FD0rh9SEG43LITu1kR",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "name": "previous_approver",
         "shape": "",
         "valueType": "string"
     }
@@ -11725,14 +12236,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-04 06:45:28</sys_created_on>
         <sys_id>5b0347dbc3e11210945e9e1d0501316f</sys_id>
-        <sys_mod_count>159</sys_mod_count>
+        <sys_mod_count>188</sys_mod_count>
         <sys_name>eSO Record Page</sys_name>
         <sys_package display_value="eSO Mockup" source="x_1040502_eso_mo_0">2a930f88c3211210945e9e1d05013139</sys_package>
         <sys_policy/>
         <sys_scope display_value="eSO Mockup">2a930f88c3211210945e9e1d05013139</sys_scope>
         <sys_update_name>sys_ux_macroponent_5b0347dbc3e11210945e9e1d0501316f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-22 09:36:39</sys_updated_on>
+        <sys_updated_on>2025-02-25 05:28:53</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5b0347dbc3e11210945e9e1d0501316f"/>
 </record_update>
